@@ -83,13 +83,17 @@ div#formacio{
     display: block;
     position: relative;
     background-color: var(--primary);
+
+    z-index: 800;
 }
 div#formacio div#title-formacio{
     height: 200px;
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: var(--primary);
 }
 
@@ -107,10 +111,20 @@ div#formacio div#title-formacio p:hover{
 }
 
 /* APARTATS DE FORMACIÓ */
+/* APARTATS DE FORMACIÓ */
 
 svg#svg-formacio{
-    display: ;
+    position: absolute;
+    right: 40vw;
+    top: 1070px;
+    height: 1100px;
+    z-index: 999;
 }
+
+/* APARTATS DE FORMACIÓ */
+/* APARTATS DE FORMACIÓ */
+
+
 
 #sec-form{
     display: flex;
@@ -129,12 +143,9 @@ svg#svg-formacio{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
     height: 150px;
     width: 90%;
-
     margin: 70px 0;
-
     background-color: aliceblue;
 }
 
