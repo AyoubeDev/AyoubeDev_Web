@@ -51,7 +51,6 @@
     </svg>
     <!-- SVG -->
 
-
     <!-- apartat de formació, articles en horitzontal, amb descripció imatge -->
     <div id="formacio">
         <div id="title-formacio"> <!-- titol inicial de la secció-->
@@ -60,13 +59,19 @@
         <!-- apartats -->
 
         <section id="sec-form">
-            <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
+            <div class="sec-form-div">
                 <article>
                     <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
                     <p></p>
                 </article>
             </div>
-            <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+                <article>
+                    <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+                    <p></p>
+                </article>
+            </div>
+            <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
                 <article>
                     <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
                     <p></p>
@@ -84,19 +89,13 @@
                     <p></p>
                 </article>
             </div>
-            <div class="sec-form-div">
+            <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
                 <article>
                     <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
                     <p></p>
                 </article>
             </div>
-            <div class="sec-form-div">
-                <article>
-                    <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-                    <p></p>
-                </article>
-            </div>
-            <div class="sec-form-div">
+            <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
                 <article>
                     <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
                     <p></p>
@@ -110,6 +109,85 @@
             </div>
         </section>
     </div>
+
+    <div id="llenguatges">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('#llenguatges .card');
+
+        cards.forEach(card => {
+
+            let rect = null;
+            let currentX = 0;
+            let currentY = 0;
+            let targetX = 0;
+            let targetY = 0;
+            let rAF = null;
+
+            const maxRotate = 18;   // rotación máxima en grados
+            const ease = 0.12;      // suavizado (0.1–0.2 ideal)
+
+            function lerp(a, b, t) {
+                return a + (b - a) * t;
+            }
+
+            function update() {
+                // suavizado hacia objetivo
+                currentX = lerp(currentX, targetX, ease);
+                currentY = lerp(currentY, targetY, ease);
+
+                // aplicar transformación
+                card.style.transform = `
+            rotateX(${currentX}deg)
+            rotateY(${currentY}deg)
+            translateZ(40px)
+        `;
+
+                // continuar si falta suavizado
+                if (Math.abs(currentX - targetX) > 0.1 || Math.abs(currentY - targetY) > 0.1) {
+                    rAF = requestAnimationFrame(update);
+                } else {
+                    rAF = null; // ya no hace falta animar
+                }
+            }
+
+            card.addEventListener("mousemove", (e) => {
+                rect = card.getBoundingClientRect();
+
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                // convertir en rango -1 a 1
+                const normX = (x / rect.width) * 2 - 1;
+                const normY = (y / rect.height) * 2 - 1;
+
+                // calcular objetivo de rotación
+                targetY = normX * maxRotate;   // gira hacia izquierda/derecha
+                targetX = -normY * maxRotate;  // gira hacia arriba/abajo
+
+                // arrancar rAF si no está activo
+                if (!rAF) {
+                    rAF = requestAnimationFrame(update);
+                }
+            });
+
+            card.addEventListener("mouseleave", () => {
+                // reiniciar objetivos a 0
+                targetX = 0;
+                targetY = 0;
+
+                // arrancar animación si no estaba activa
+                if (!rAF) {
+                    rAF = requestAnimationFrame(update);
+                }
+            });
+        });
+    </script>
 
 
     <!-- apartat de experiencia laboral -->
@@ -119,15 +197,30 @@
             <article></article>
         </section>
     </div>
-    <div id="llenguatges"></div>
+
     <div id="competencies"></div>
     <div id="projectes"></div>
 
     <footer>
-        <div id="social-media"></div>
-        <div id="contact"></div>
-        <div id="copyright"></div>
+        <div id="social-media">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="contact">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="copyright">
+            <p></p>
+        </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
