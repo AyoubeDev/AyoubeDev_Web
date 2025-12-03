@@ -33,6 +33,7 @@ header {
 }
 
 header #logo-header {
+
     width: 60px;
     height: 60px;
     background-color: red;
@@ -40,10 +41,47 @@ header #logo-header {
 }
 
 header #main-menu {
-    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
     height: 60px;
-    background-color: red;
     margin-right: 5%;
+}
+
+header #main-menu p{
+    width: 25%;
+    display: inline-block;
+    height: auto;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+header #main-menu p a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#main-menu p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+#main-menu p:hover::after {
+    width: 100%;
 }
 
 /* ///////////////////////////////////////////////////////////// */
@@ -118,9 +156,10 @@ div#formacio div#title-formacio p:hover {
 
 svg#svg-formacio {
     position: absolute;
-    right: 36.6vw;
+    right: 50vw;
     top: 1070px;
     height: 1100px;
+    width: 30px;
     z-index: 999;
 }
 
@@ -205,10 +244,12 @@ div.sec-form-div:nth-child(8) {
     -webkit-box-shadow: 1px 1px 25px 55px rgba(0,0,0,1) inset;
     -moz-box-shadow: 1px 1px 25px 55px rgba(0,0,0,1) inset;
 
-    background-image: url(/DAM-ProjecteFinal-WEB-Ayoube/IMG-references/lenguas/background-2.jpg);
+    background-image: url(/IMG-references/lenguas/background-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    overflow: overlay;
 }
 
 
@@ -236,6 +277,7 @@ div#llenguatges div.card:hover {
     box-shadow: 25px 25px 30px rgba(0, 247, 255, 0.438);
     transform: translateZ(30px) rotateY(20deg) rotateX(10deg);
     background-color: aquamarine;
+    
 }
 
 
