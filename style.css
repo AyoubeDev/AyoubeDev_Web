@@ -50,7 +50,7 @@ header #main-menu {
     margin-right: 5%;
 }
 
-header #main-menu p{
+header #main-menu p {
     width: 25%;
     display: inline-block;
     height: auto;
@@ -64,7 +64,7 @@ header #main-menu p{
     font-family: 'Montserrat', sans-serif;
 }
 
-header #main-menu p a{
+header #main-menu p a {
     text-decoration: none;
     color: aliceblue;
 }
@@ -240,9 +240,9 @@ div.sec-form-div:nth-child(8) {
     perspective: 900px;
     transform-style: preserve-3d;
 
-    box-shadow: 1px 1px 25px 55px rgba(0,0,0,1) inset;
-    -webkit-box-shadow: 1px 1px 25px 55px rgba(0,0,0,1) inset;
-    -moz-box-shadow: 1px 1px 25px 55px rgba(0,0,0,1) inset;
+    box-shadow: 1px 1px 25px 55px rgba(0, 0, 0, 1) inset;
+    -webkit-box-shadow: 1px 1px 25px 55px rgba(0, 0, 0, 1) inset;
+    -moz-box-shadow: 1px 1px 25px 55px rgba(0, 0, 0, 1) inset;
 
     background-image: url(/IMG-references/lenguas/background-2.jpg);
     background-repeat: no-repeat;
@@ -263,7 +263,7 @@ div.sec-form-div:nth-child(8) {
 
 
     height: 200px;
-    width: 20%;
+    width: 17%;
     border-radius: 40px;
     background-color: aquamarine;
 
@@ -277,13 +277,54 @@ div#llenguatges div.card:hover {
     box-shadow: 25px 25px 30px rgba(0, 247, 255, 0.438);
     transform: translateZ(30px) rotateY(20deg) rotateX(10deg);
     background-color: aquamarine;
-    
+
 }
 
 
 /* ///////////////////////////////////////////////////////////// */
 /* COMPETÈNCIES LINGUISTIQUES
 /* COMPETÈNCIES LINGUISTIQUES
+/* ///////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////// */
+/* SKILLS
+/* SKILLS
+/* ///////////////////////////////////////////////////////////// */
+
+:root {
+--duration: 120s;
+}
+
+
+.carousel {
+width: 100vw;
+height: 80vh;
+overflow: hidden;
+background: var(--primary);
+}
+
+.track {
+display: flex;
+width: calc(7vw * 10.5);
+animation: scroll var(--duration) linear infinite;
+}
+
+.track img {
+height: 7vw;
+margin: 0 50px;
+object-fit: cover;
+user-select: none;
+-webkit-user-drag: none;
+}
+
+@keyframes scroll {
+from { transform: translateX(0); }
+to { transform: translateX(calc(-100vw * 4)); }
+}
+
+/* ///////////////////////////////////////////////////////////// */
+/* SKILLS
+/* SKILLS
 /* ///////////////////////////////////////////////////////////// */
 
 /* ///////////////////////////////////////////////////////////// */
@@ -359,10 +400,31 @@ footer div#contact a {
     background-color: #003a3a;
 }
 
+footer div#PP {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+
+    height: 10%;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    background-color: var(--primary);
+}
+
+footer div#PP a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+}
+
 footer div#copyright {
     display: flex;
     position: relative;
-    height: 10%;
+    height: 5%;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -370,6 +432,11 @@ footer div#copyright {
 
     background-color: #00d2d2;
 }
+
+footer div#copyright p {
+    font-size: 10px;
+}
+
 
 /* ///////////////////////////////////////////////////////////// */
 /* FOOTER

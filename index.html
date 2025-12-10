@@ -1,300 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV - Ayoube</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <!-- part del menu de navegació -->
-    <!-- presentació inicial amb imatge i descripció -->
-    <header>
-      <div id="logo-header"></div>
-      <nav id="main-menu">
-        <p><a href="">Formació</a></p>
-        <p><a href="">Experiència Laboral</a></p>
-        <p><a href="">Projectes</a></p>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Ayoube</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- secció principal per mostrar una fotografia de mi i una descripció  -->
-    <section id="section-header">
-      <article>
-        <img src="" alt="" />
-      </article>
-      <article>
-        <p id="nom"></p>
-        <p id="descripcio"></p>
-      </article>
+<body>
+  <!-- part del menu de navegació -->
+  <!-- presentació inicial amb imatge i descripció -->
+  <header>
+    <div id="logo-header"></div>
+    <nav id="main-menu">
+      <p><a href="">Formació</a></p>
+      <p><a href="">Experiència Laboral</a></p>
+      <p><a href="">Projectes</a></p>
+    </nav>
+  </header>
+
+  <!-- secció principal per mostrar una fotografia de mi i una descripció  -->
+  <section id="section-header">
+    <article>
+      <img src="" alt="" />
+    </article>
+    <article>
+      <p id="nom"></p>
+      <p id="descripcio"></p>
+    </article>
+  </section>
+
+  <!-- SVG -->
+  <svg id="svg-formacio">
+    <!-- Línea vertical con path -->
+    <path d="M15 00 L15 1100" stroke="var(--second)" stroke-width="2" />
+
+    <!-- Puntos -->
+    <circle cx="15" cy="110" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+    <circle cx="15" cy="400" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+    <circle cx="15" cy="690" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+    <circle cx="15" cy="985" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+  </svg>
+  <!-- SVG -->
+
+  <!-- apartat de formació, articles en horitzontal, amb descripció imatge -->
+  <div id="formacio">
+    <div id="title-formacio">
+      <!-- titol inicial de la secció-->
+      <p>TITLE</p>
+    </div>
+    <!-- apartats -->
+
+    <section id="sec-form">
+      <div class="sec-form-div">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
+      <div class="sec-form-div">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
+      <div class="sec-form-div">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
+      <div class="sec-form-div">
+        <article>
+          <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
+          <p></p>
+        </article>
+      </div>
     </section>
+  </div>
 
-    <!-- SVG -->
-    <svg id="svg-formacio">
-      <!-- Línea vertical con path -->
-      <path d="M15 00 L15 1100" stroke="var(--second)" stroke-width="2" />
-
-      <!-- Puntos -->
-      <circle
-        cx="15"
-        cy="110"
-        r="10"
-        fill="white"
-        stroke="#00dfdf65"
-        stroke-width="5"
-      />
-      <circle
-        cx="15"
-        cy="400"
-        r="10"
-        fill="white"
-        stroke="#00dfdf65"
-        stroke-width="5"
-      />
-      <circle
-        cx="15"
-        cy="690"
-        r="10"
-        fill="white"
-        stroke="#00dfdf65"
-        stroke-width="5"
-      />
-      <circle
-        cx="15"
-        cy="985"
-        r="10"
-        fill="white"
-        stroke="#00dfdf65"
-        stroke-width="5"
-      />
-    </svg>
-    <!-- SVG -->
-
-    <!-- apartat de formació, articles en horitzontal, amb descripció imatge -->
-    <div id="formacio">
-      <div id="title-formacio">
-        <!-- titol inicial de la secció-->
-        <p>TITLE</p>
-      </div>
-      <!-- apartats -->
-
-      <section id="sec-form">
-        <div class="sec-form-div">
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-        <div
-          class="sec-form-div"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
-        >
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-        <div
-          class="sec-form-div"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
-        >
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-        <div class="sec-form-div">
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-        <div class="sec-form-div">
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-        <div
-          class="sec-form-div"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
-        >
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-        <div
-          class="sec-form-div"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
-        >
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-        <div class="sec-form-div">
-          <article>
-            <!-- <img src="" alt="">  aquesta imatge estarà de fons en el aticle  -->
-            <p></p>
-          </article>
-        </div>
-      </section>
+  <div id="llenguatges">
+    <div class="card">
+      <p>
+        CATALA
+      </p>
+      <p>
+        Natiu
+      </p>
     </div>
-
-    <div id="llenguatges">
-      <div class="card">
-        <p>
-            CATALA
-        </p>
-        <p>
-            Natiu
-        </p>
-      </div>
-      <div class="card">
-        <p>
-            CATALA
-        </p>
-        <p>
-            Natiu
-        </p>
-      </div>
-      <div class="card">
-        <p>
-            CATALA
-        </p>
-        <p>
-            Natiu
-        </p>
-      </div>
-      <div class="card">
-        <p>
-            CATALA
-        </p>
-        <p>
-            Natiu
-        </p>
-      </div>
+    <div class="card">
+      <p>
+        CATALA
+      </p>
+      <p>
+        Natiu
+      </p>
     </div>
+    <div class="card">
+      <p>
+        CATALA
+      </p>
+      <p>
+        Natiu
+      </p>
+    </div>
+    <div class="card">
+      <p>
+        CATALA
+      </p>
+      <p>
+        Natiu
+      </p>
+    </div>
+  </div>
 
-    <script>
-      const cards = document.querySelectorAll("#llenguatges .card");
+  <script>
+    const cards = document.querySelectorAll("#llenguatges .card");
 
-      const maxRotate = 18;
-      const ease = 0.12;
+    const maxRotate = 18;
+    const ease = 0.12;
 
-      function lerp(a, b, t) {
-        return a + (b - a) * t;
-      }
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
+    }
 
-      cards.forEach((card) => {
-        let rect = card.getBoundingClientRect();
-        let currentX = 0,
-          currentY = 0;
-        let targetX = 0,
-          targetY = 0;
-        let rAF = null;
+    cards.forEach((card) => {
+      let rect = card.getBoundingClientRect();
+      let currentX = 0,
+        currentY = 0;
+      let targetX = 0,
+        targetY = 0;
+      let rAF = null;
 
-        const update = () => {
-          currentX = lerp(currentX, targetX, ease);
-          currentY = lerp(currentY, targetY, ease);
+      const update = () => {
+        currentX = lerp(currentX, targetX, ease);
+        currentY = lerp(currentY, targetY, ease);
 
-          card.style.transform = `
+        card.style.transform = `
             rotateX(${currentX}deg)
             rotateY(${currentY}deg)
             translateZ(40px)
         `;
 
-          if (
-            Math.abs(currentX - targetX) > 0.1 ||
-            Math.abs(currentY - targetY) > 0.1
-          ) {
-            rAF = requestAnimationFrame(update);
-          } else {
-            rAF = null;
-          }
-        };
+        if (
+          Math.abs(currentX - targetX) > 0.1 ||
+          Math.abs(currentY - targetY) > 0.1
+        ) {
+          rAF = requestAnimationFrame(update);
+        } else {
+          rAF = null;
+        }
+      };
 
-        const startAnimation = () => {
-          if (!rAF) rAF = requestAnimationFrame(update);
-        };
+      const startAnimation = () => {
+        if (!rAF) rAF = requestAnimationFrame(update);
+      };
 
-        card.addEventListener("mousemove", (e) => {
-          // Solo actualizar el rect si realmente cambia el tamaño (más eficiente)
-          rect = card.getBoundingClientRect();
+      card.addEventListener("mousemove", (e) => {
+        // Solo actualizar el rect si realmente cambia el tamaño (más eficiente)
+        rect = card.getBoundingClientRect();
 
-          const normX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-          const normY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+        const normX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        const normY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
 
-          targetY = normX * maxRotate;
-          targetX = -normY * maxRotate;
+        targetY = normX * maxRotate;
+        targetX = -normY * maxRotate;
 
-          startAnimation();
-        });
-
-        card.addEventListener("mouseleave", () => {
-          targetX = 0;
-          targetY = 0;
-          startAnimation();
-        });
+        startAnimation();
       });
-    </script>
 
-    <!-- apartat de experiencia laboral -->
-    <!-- un requadre amb imatge i el nom de l'empresa i al costat una descripció i la durada de la instancia -->
-    <div id="exp_laboral">
-      <section id="grid">
-        <article></article>
-      </section>
+      card.addEventListener("mouseleave", () => {
+        targetX = 0;
+        targetY = 0;
+        startAnimation();
+      });
+    });
+  </script>
+
+  <section id="carrusel_skills">
+    <div class="carousel">
+      <div class="track">
+        <img src="/IMG-references/logos/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects">
+        <img src="/IMG-references/logos/Adobe_Photoshop_CC_icon.svg.png" alt="PhotoShop">
+        <img src="/IMG-references/logos/autodesk-maya-small-social-400.png" alt="Maya">
+        <img src="/IMG-references/logos/Blender_logo_no_text.svg.png" alt="Blender">
+        <img src="/IMG-references/logos/HTML-5-Badge-Logo.png" alt="HTML">
+        <img src="/IMG-references/logos/logotipo_css-min.png" alt="CSS">
+        <img src="/IMG-references/logos/Python-logo-notext.svg.png" alt="Python">
+        <img src="/IMG-references/logos/substant-painter.png" alt="Substance Painter 3D">
+        <img src="/IMG-references/logos/Unity-logo.png" alt="Unity">
+        <img src="/IMG-references/logos/pngimg.com - mysql_PNG23.png" alt="MySQL">
+
+
+
+
+        <img src="/IMG-references/logos/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects">
+        <img src="/IMG-references/logos/Adobe_Photoshop_CC_icon.svg.png" alt="PhotoShop">
+        <img src="/IMG-references/logos/autodesk-maya-small-social-400.png" alt="Maya">
+        <img src="/IMG-references/logos/Blender_logo_no_text.svg.png" alt="Blender">
+        <img src="/IMG-references/logos/HTML-5-Badge-Logo.png" alt="HTML">
+        <img src="/IMG-references/logos/logotipo_css-min.png" alt="CSS">
+        <img src="/IMG-references/logos/Python-logo-notext.svg.png" alt="Python">
+        <img src="/IMG-references/logos/substant-painter.png" alt="Substance Painter 3D">
+        <img src="/IMG-references/logos/Unity-logo.png" alt="Unity">
+        <img src="/IMG-references/logos/pngimg.com - mysql_PNG23.png" alt="MySQL">
+      </div>
+    </div>
+  </section>
+
+  <!-- apartat de experiencia laboral -->
+  <!-- un requadre amb imatge i el nom de l'empresa i al costat una descripció i la durada de la instancia -->
+  <div id="exp_laboral">
+    <section id="grid">
+      <article></article>
+    </section>
+  </div>
+
+  <div id="competencies"></div>
+  <div id="projectes"></div>
+
+  <footer>
+    <div id="social-media">
+      <a href="">
+        <img src="/IMG-references/linkedin-black-logo.png" alt="Pequeño coche rojo en un semáforo" />
+      </a>
+      <a href="">
+        <img src="IMG-references/87390.png" alt="Pequeño coche rojo en un semáforo" />
+      </a>
+      <a href="">
+        <img src="IMG-references/x-social-media-logo-icon.webp" alt="Pequeño coche rojo en un semáforo" />
+      </a>
+    </div>
+    <div id="contact">
+      <div><a href=""></a></div>
+      <div><a href=""></a></div>
+      <div><a href=""></a></div>
+    </div>
+    <div id="PP">
+      <a href="">Avis Legal</a>
+      <a href="">Cookies</a>
+      <a href="">Politiques de privacitat</a>
+    </div>
+    <div id="copyright">
+      <p>&copy; Ayoube Assanhaji Chilah 2025 - tots els drets reservats</p>
     </div>
 
-    <div id="competencies"></div>
-    <div id="projectes"></div>
+  </footer>
 
-    <footer>
-      <div id="social-media">
-        <a href="">
-          <img
-            src="/IMG-references/discord-black-icon-1.png"
-            alt="Pequeño coche rojo en un semáforo"
-          />
-        </a>
-        <a href="">
-          <img
-            src="IMG-references/87390.png"
-            alt="Pequeño coche rojo en un semáforo"
-          />
-        </a>
-        <a href="">
-          <img
-            src="IMG-references/x-social-media-logo-icon.webp"
-            alt="Pequeño coche rojo en un semáforo"
-          />
-        </a>
-      </div>
-      <div id="contact">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div id="copyright">
-        <p></p>
-      </div>
-      <div id="PP">
-        <p>Avis Legal</p>
-        <p>Cookies</p>
-        <p>Politiques de privacitat</p>
-      </div>
-    </footer>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <!-- <script>
-      AOS.init();
-    </script> -->
-  </body>
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
