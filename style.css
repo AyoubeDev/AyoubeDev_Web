@@ -292,34 +292,47 @@ div#llenguatges div.card:hover {
 /* ///////////////////////////////////////////////////////////// */
 
 :root {
---duration: 120s;
+    --duration: 20s;
 }
 
 
 .carousel {
-width: 100vw;
-height: 80vh;
-overflow: hidden;
-background: var(--primary);
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 500px;
+    background-color: var(--primary);
+    overflow: hidden;
+
 }
 
 .track {
-display: flex;
-width: calc(7vw * 10.5);
-animation: scroll var(--duration) linear infinite;
+    display: flex;
+    width: calc(7vw * 10);
+    animation: scroll var(--duration) linear infinite;
+        box-shadow: 1px 1px 79px 55px rgba(0, 0, 0, 1) inset;
+    -webkit-box-shadow: 1px 1px 79px 55px rgba(0, 0, 0, 1) inset;
+    -moz-box-shadow: 1px 1px 79px 55px rgba(0, 0, 0, 1) inset;
+    background-color: #003a3a;
+
 }
 
 .track img {
-height: 7vw;
-margin: 0 50px;
-object-fit: cover;
-user-select: none;
--webkit-user-drag: none;
+    height: 7vw;
+    margin: 0 50px;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 @keyframes scroll {
-from { transform: translateX(0); }
-to { transform: translateX(calc(-100vw * 4)); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-7vw * 17.65));
+    }
 }
 
 /* ///////////////////////////////////////////////////////////// */
