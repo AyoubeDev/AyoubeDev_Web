@@ -94,17 +94,129 @@ header #main-menu p a {
 /* ///////////////////////////////////////////////////////////// */
 
 section#section-header {
-    height: 700px;
+    height: 900px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: radial-gradient(circle, var(--second) 15%, var(--primary) 30%);
 }
+
+
 
 section#section-header article {
     width: 40%;
     height: 450px;
     background-color: var(--second);
+}
+
+
+/* Variables */
+:root {
+    --text-1: "diseñador";
+    --text-2: "desarrollador";
+    --n1: 10;
+    /* Length of "diseñador" */
+    --n2: 13;
+    /* Length of "desarrollador" */
+    --typing-speed: 1s;
+    --pause-time: 1.5s;
+    --cycle-time: calc(var(--typing-speed) + var(--pause-time));
+    --total-time: calc(var(--cycle-time) * 2);
+    /* Dos ciclos */
+
+    --cursor-width: 3px;
+    --cursor-color: #fff;
+}
+
+.typing-container {
+    display: inline-flex;
+    font-family: monospace;
+    font-size: 2.5rem;
+    color: white;
+    /* Necesario para el pseudoelemento del cursor */
+    position: relative;
+}
+
+.dynamic-text::before {
+    content: var(--text-1);
+    /* El texto por defecto es la primera palabra */
+    color: white;
+    /* La animación de cambio de contenido se aplica aquí */
+    animation:
+        type-change var(--total-time) steps(var(--n2)) infinite forwards;
+
+    /* Para controlar el ancho de la escritura */
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    /* La animación de escribir/borrar se aplica aquí */
+    animation:
+        typing-erasing var(--total-time) linear infinite;
+}
+
+/* Cursor parpadeante (como pseudo-elemento del contenedor dinámico) */
+.dynamic-text::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--cursor-width);
+    background-color: var(--cursor-color);
+    animation:
+        caret-blink 0.75s step-end infinite;
+}
+
+
+/* 1. Animación que simula escribir y borrar (controla el ancho) */
+@keyframes typing-erasing {
+
+    /* 0% a 25%: Escribir "diseñador" (width crece) */
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: calc(var(--n1) * 1ch);
+    }
+
+    /* 25% a 35%: Pausa */
+    35% {
+        width: calc(var(--n1) * 1ch);
+    }
+
+    /* 35% a 50%: Borrar "diseñador" (width decrece) */
+    50% {
+        width: 0;
+    }
+
+    /* 50% a 75%: Escribir "desarrollador" (width crece) */
+    75% {
+        width: calc(var(--n2) * 1ch);
+    }
+
+    /* 75% a 90%: Pausa */
+    90% {
+        width: calc(var(--n2) * 1ch);
+    }
+
+    /* 90% a 100%: Borrar "desarrollador" (width decrece) */
+    100% {
+        width: 0;
+    }
+}
+
+/* 2. Animación del Cursor */
+@keyframes caret-blink {
+
+    from,
+    to {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
 }
 
 /* ///////////////////////////////////////////////////////////// */
@@ -234,7 +346,7 @@ div.sec-form-div:nth-child(8) {
     justify-content: space-evenly;
     align-items: center;
 
-    height: 700px;
+    height: 300px;
     width: 100%;
 
     perspective: 900px;
@@ -244,7 +356,6 @@ div.sec-form-div:nth-child(8) {
     -webkit-box-shadow: 1px 1px 25px 55px rgba(0, 0, 0, 1) inset;
     -moz-box-shadow: 1px 1px 25px 55px rgba(0, 0, 0, 1) inset;
 
-    background-image: url(/IMG-references/lenguas/background-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -265,7 +376,7 @@ div.sec-form-div:nth-child(8) {
     height: 200px;
     width: 17%;
     border-radius: 40px;
-    background-color: aquamarine;
+    background-color: var(--second);
 
     box-shadow: 25px 25px 30px rgba(0, 247, 255, 0.2);
 
@@ -276,7 +387,7 @@ div.sec-form-div:nth-child(8) {
 div#llenguatges div.card:hover {
     box-shadow: 25px 25px 30px rgba(0, 247, 255, 0.438);
     transform: translateZ(30px) rotateY(20deg) rotateX(10deg);
-    background-color: aquamarine;
+    background-color: var(--second);
 
 }
 
@@ -303,18 +414,37 @@ div#llenguatges div.card:hover {
     height: 500px;
     background-color: var(--primary);
     overflow: hidden;
+    position: relative;
+}
 
+.carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100%;
+    background: linear-gradient(to right, var(--primary) 20%, transparent 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    background: linear-gradient(to left, var(--primary) 20%, transparent 100%);
+    z-index: 10;
+    pointer-events: none;
 }
 
 .track {
     display: flex;
     width: calc(7vw * 10);
     animation: scroll var(--duration) linear infinite;
-        box-shadow: 1px 1px 79px 55px rgba(0, 0, 0, 1) inset;
-    -webkit-box-shadow: 1px 1px 79px 55px rgba(0, 0, 0, 1) inset;
-    -moz-box-shadow: 1px 1px 79px 55px rgba(0, 0, 0, 1) inset;
-    background-color: #003a3a;
-
 }
 
 .track img {
@@ -323,6 +453,9 @@ div#llenguatges div.card:hover {
     object-fit: cover;
     user-select: none;
     -webkit-user-drag: none;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1) drop-shadow(1px 1px 30px var(--second));
+
 }
 
 @keyframes scroll {
@@ -338,6 +471,67 @@ div#llenguatges div.card:hover {
 /* ///////////////////////////////////////////////////////////// */
 /* SKILLS
 /* SKILLS
+/* ///////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////////////////////////////////////// */
+/* exp laboral
+/* exp laboral
+/* ///////////////////////////////////////////////////////////// */
+
+div#exp_laboral{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+
+    width: 90%;
+    height: 90%;
+}
+
+
+.parent div{
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+#div1 {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+#div2 {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#div3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#div4 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+#div5 {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+#div6 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+/* ///////////////////////////////////////////////////////////// */
+/* exp laboral
+/* exp laboral
 /* ///////////////////////////////////////////////////////////// */
 
 /* ///////////////////////////////////////////////////////////// */
@@ -357,7 +551,6 @@ footer {
     height: 400px;
     width: 100%;
 
-    background-color: bisque;
 }
 
 footer div#social-media {
@@ -369,7 +562,11 @@ footer div#social-media {
     justify-content: center;
     flex-direction: row;
 
-    background-color: #00d2d2;
+    background-color: var(--second);
+
+    box-shadow: -1px -1px 32px 23px var(--second);
+    -webkit-box-shadow: -1px -1px 23px 30px var(--second);
+    -moz-box-shadow: -1px -1px 23px 30px var(--second);
 }
 
 footer div#social-media a {
@@ -425,7 +622,11 @@ footer div#PP {
     justify-content: center;
     flex-direction: row;
 
-    background-color: var(--primary);
+    background-color: var(--second);
+
+    box-shadow: -1px -1px 23px 30px var(--second);
+    -webkit-box-shadow: -1px -1px 23px 30px var(--second);
+    -moz-box-shadow: -1px -1px 23px 30px var(--second);
 }
 
 footer div#PP a {
@@ -443,11 +644,12 @@ footer div#copyright {
     justify-content: center;
     flex-direction: row;
 
-    background-color: #00d2d2;
+    background-color: var(--primary);
 }
 
 footer div#copyright p {
     font-size: 10px;
+    color: white;
 }
 
 
