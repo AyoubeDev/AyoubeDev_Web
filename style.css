@@ -161,7 +161,7 @@ div#formacio div#title-formacio p:hover {
 svg#svg-formacio {
     position: absolute;
     right: 50vw;
-    top: 1070px;
+    top: 1240px;
     height: 1100px;
     width: 30px;
     z-index: 999;
@@ -360,6 +360,24 @@ div#llenguatges div.card:hover {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .carousel {
+        height: 200px;
+    }
+    .track img {
+    margin: 0 20px;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-7vw * 22));
+    }
+}
+}
+
 /* ///////////////////////////////////////////////////////////// */
 /* SKILLS
 /* SKILLS
@@ -537,13 +555,17 @@ div#exp_laboral {
 #scroll-menu::before {
     content: "";
     position: absolute;
-    bottom: -22px; /* extend the hover-tolerance zone */
+    bottom: -22px;
+    /* extend the hover-tolerance zone */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 22px; /* larger gap coverage */
-    pointer-events: auto; /* allow this zone to receive the cursor */
-    background: transparent; /* invisible but active */
+    height: 22px;
+    /* larger gap coverage */
+    pointer-events: auto;
+    /* allow this zone to receive the cursor */
+    background: transparent;
+    /* invisible but active */
 }
 
 #scroll-menu::after {
@@ -557,7 +579,8 @@ div#exp_laboral {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-top: 8px solid rgba(0, 0, 0, 0.95);
-        pointer-events: auto; /* allow this zone to receive the cursor */
+    pointer-events: auto;
+    /* allow this zone to receive the cursor */
 }
 
 #scroll-menu a {
@@ -819,7 +842,7 @@ footer div#PP {
 footer div#PP a {
     margin: 0 20px;
     text-decoration: none;
-    color: white;
+    color: var(--primary);
 }
 
 footer div#copyright {
@@ -831,12 +854,12 @@ footer div#copyright {
     justify-content: center;
     flex-direction: row;
 
-    background-color: var(--primary);
+    background-color: transparent;
 }
 
 footer div#copyright p {
     font-size: 10px;
-    color: white;
+    color: var(--primary);
 }
 
 
