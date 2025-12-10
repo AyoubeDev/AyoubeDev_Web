@@ -109,115 +109,7 @@ section#section-header article {
 }
 
 
-/* Variables */
-:root {
-    --text-1: "diseñador";
-    --text-2: "desarrollador";
-    --n1: 10;
-    /* Length of "diseñador" */
-    --n2: 13;
-    /* Length of "desarrollador" */
-    --typing-speed: 1s;
-    --pause-time: 1.5s;
-    --cycle-time: calc(var(--typing-speed) + var(--pause-time));
-    --total-time: calc(var(--cycle-time) * 2);
-    /* Dos ciclos */
 
-    --cursor-width: 3px;
-    --cursor-color: #fff;
-}
-
-.typing-container {
-    display: inline-flex;
-    font-family: monospace;
-    font-size: 2.5rem;
-    color: white;
-    /* Necesario para el pseudoelemento del cursor */
-    position: relative;
-}
-
-.dynamic-text::before {
-    content: var(--text-1);
-    /* El texto por defecto es la primera palabra */
-    color: white;
-    /* La animación de cambio de contenido se aplica aquí */
-    animation:
-        type-change var(--total-time) steps(var(--n2)) infinite forwards;
-
-    /* Para controlar el ancho de la escritura */
-    width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-
-    /* La animación de escribir/borrar se aplica aquí */
-    animation:
-        typing-erasing var(--total-time) linear infinite;
-}
-
-/* Cursor parpadeante (como pseudo-elemento del contenedor dinámico) */
-.dynamic-text::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: var(--cursor-width);
-    background-color: var(--cursor-color);
-    animation:
-        caret-blink 0.75s step-end infinite;
-}
-
-
-/* 1. Animación que simula escribir y borrar (controla el ancho) */
-@keyframes typing-erasing {
-
-    /* 0% a 25%: Escribir "diseñador" (width crece) */
-    0% {
-        width: 0;
-    }
-
-    25% {
-        width: calc(var(--n1) * 1ch);
-    }
-
-    /* 25% a 35%: Pausa */
-    35% {
-        width: calc(var(--n1) * 1ch);
-    }
-
-    /* 35% a 50%: Borrar "diseñador" (width decrece) */
-    50% {
-        width: 0;
-    }
-
-    /* 50% a 75%: Escribir "desarrollador" (width crece) */
-    75% {
-        width: calc(var(--n2) * 1ch);
-    }
-
-    /* 75% a 90%: Pausa */
-    90% {
-        width: calc(var(--n2) * 1ch);
-    }
-
-    /* 90% a 100%: Borrar "desarrollador" (width decrece) */
-    100% {
-        width: 0;
-    }
-}
-
-/* 2. Animación del Cursor */
-@keyframes caret-blink {
-
-    from,
-    to {
-        opacity: 0
-    }
-
-    50% {
-        opacity: 1
-    }
-}
 
 /* ///////////////////////////////////////////////////////////// */
 /* HEADER SECTION */
@@ -479,7 +371,7 @@ div#llenguatges div.card:hover {
 /* exp laboral
 /* ///////////////////////////////////////////////////////////// */
 
-div#exp_laboral{
+div#exp_laboral {
     height: 70vh;
     width: 100vw;
     display: flex;
@@ -500,9 +392,51 @@ div#exp_laboral{
 }
 
 
-.parent div{
+.parent div {
     background-color: #fff;
     border-radius: 15px;
+}
+
+/* Pop-up simple sobre cada bloque de experiencia laboral */
+.parent div {
+    position: relative;
+    overflow: visible;
+}
+
+.parent div .popup {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 40;
+}
+
+.parent div .popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(0, 0, 0, 0.9);
+}
+
+.parent div:hover .popup {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
 }
 
 #div1 {
@@ -511,27 +445,280 @@ div#exp_laboral{
 
 #div2 {
     grid-area: 1 / 1 / 3 / 2;
+    background-image: url(/IMG-references/empresas/si2.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #div3 {
     grid-area: 2 / 2 / 3 / 3;
+    background-image: url(/IMG-references/empresas/OXFAM.jpeg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #div4 {
-    grid-area: 2 / 3 / 3 / 4;
+    grid-area: 2 / 3 / 4 / 4;
+    background-image: url(/IMG-references/empresas/engruna.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #div5 {
     grid-area: 3 / 1 / 4 / 3;
-}
+    background-image: url(/IMG-references/empresas/UVIC.jpg);
 
-#div6 {
-    grid-area: 3 / 3 / 4 / 4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ///////////////////////////////////////////////////////////// */
 /* exp laboral
 /* exp laboral
+/* ///////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////// */
+/* CONTACT BUBBLE
+/* CONTACT BUBBLE
+/* ///////////////////////////////////////////////////////////// */
+
+/* Scroll to Top / Navigation Bubble */
+#scroll-bubble {
+    position: fixed;
+    bottom: 140px;
+    right: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--second);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 210, 210, 0.3);
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+#scroll-icon {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+#scroll-bubble:hover #scroll-icon {
+    transform: scale(1.3);
+}
+
+#scroll-menu {
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 12px;
+    padding: 10px 0;
+    min-width: 150px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0, 210, 210, 0.4);
+}
+
+#scroll-menu::before {
+    content: "";
+    position: absolute;
+    bottom: -22px; /* extend the hover-tolerance zone */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 22px; /* larger gap coverage */
+    pointer-events: auto; /* allow this zone to receive the cursor */
+    background: transparent; /* invisible but active */
+}
+
+#scroll-menu::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.95);
+        pointer-events: auto; /* allow this zone to receive the cursor */
+}
+
+#scroll-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--second);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+#scroll-menu a:hover {
+    background-color: rgba(0, 210, 210, 0.1);
+    border-left-color: var(--second);
+    padding-left: 25px;
+}
+
+#scroll-bubble:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(0, 210, 210, 0.6);
+}
+
+#scroll-bubble:hover #scroll-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive - Tablets */
+@media (max-width: 768px) {
+    #scroll-bubble {
+        bottom: 130px;
+        right: 25px;
+        width: 80px;
+        height: 80px;
+    }
+
+    #scroll-icon {
+        font-size: 1.3rem;
+    }
+
+    #scroll-menu {
+        min-width: 130px;
+    }
+
+    #scroll-menu a {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    #scroll-bubble:hover {
+        transform: scale(1.12);
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    #scroll-bubble {
+        bottom: 120px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #scroll-icon {
+        font-size: 1.1rem;
+    }
+
+    #scroll-menu {
+        min-width: 120px;
+        padding: 8px 0;
+        bottom: calc(100% + 10px);
+    }
+
+    #scroll-menu a {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    #scroll-bubble:hover {
+        transform: scale(1.1);
+    }
+}
+
+#contact-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--second);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 210, 210, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#contact-bubble span {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+#contact-bubble:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(0, 210, 210, 0.6);
+    background-color: var(--second);
+}
+
+/* Responsive - Tablets */
+@media (max-width: 768px) {
+    #contact-bubble {
+        bottom: 25px;
+        right: 25px;
+        width: 80px;
+        height: 80px;
+    }
+
+    #contact-bubble span {
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+    }
+
+    #contact-bubble:hover {
+        transform: scale(1.12);
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    #contact-bubble {
+        bottom: 20px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #contact-bubble span {
+        font-size: 0.6rem;
+        letter-spacing: 0px;
+        padding: 8px;
+    }
+
+    #contact-bubble:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* ///////////////////////////////////////////////////////////// */
+/* CONTACT BUBBLE
+/* CONTACT BUBBLE
 /* ///////////////////////////////////////////////////////////// */
 
 /* ///////////////////////////////////////////////////////////// */
