@@ -263,7 +263,86 @@
     </div>
   </div>
 
-  <div id="projectes"></div>
+  <div id="projectes">
+    <div>
+      <p> PROJECTES </p>
+    </div>
+    <section id="projectes-section">
+      <article class="project-art left">
+        <div class="project-img">
+          <img src="/IMG-references/logos/HTML-5-Badge-Logo.png" alt="Proyecto 1" />
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Web</h3>
+          <p>Desarrollo de un portfolio personal con HTML, CSS y JavaScript, enfocado en la presentación visual y la experiencia de usuario.</p>
+          <div class="project-gallery">
+            <img src="/IMG-references/logos/HTML-5-Badge-Logo.png" alt="Portfolio Screenshot 1" />
+            <img src="/IMG-references/logos/logotipo_css-min.png" alt="Portfolio Screenshot 2" />
+          </div>
+        </div>
+        <button class="gallery-toggle square-btn">Ver galería</button>
+      </article>
+      <article class="project-art right">
+        <button class="gallery-toggle square-btn">Ver galería</button>
+        <div class="project-info">
+          <h3>Gestor de Tareas</h3>
+          <p>Aplicación web para gestionar tareas diarias, con funcionalidades de añadir, editar y eliminar tareas, usando React y Firebase.</p>
+          <div class="project-gallery">
+            <img src="/IMG-references/logos/Python-logo-notext.svg.png" alt="Gestor Screenshot 1" />
+            <img src="/IMG-references/logos/Unity-logo.png" alt="Gestor Screenshot 2" />
+          </div>
+        </div>
+        <div class="project-img">
+          <img src="/IMG-references/logos/Python-logo-notext.svg.png" alt="Proyecto 2" />
+        </div>
+      </article>
+      <article class="project-art left">
+        <div class="project-img">
+          <img src="/IMG-references/logos/Unity-logo.png" alt="Proyecto 3" />
+        </div>
+        <div class="project-info">
+          <h3>Videojuego 2D</h3>
+          <p>Desarrollo de un videojuego 2D educativo en Unity, con mecánicas de plataformas y retos de lógica para estudiantes.</p>
+          <div class="project-gallery">
+            <img src="/IMG-references/logos/Unity-logo.png" alt="Juego Screenshot 1" />
+            <img src="/IMG-references/logos/Blender_logo_no_text.svg.png" alt="Juego Screenshot 2" />
+          </div>
+        </div>
+        <button class="gallery-toggle square-btn">Ver galería</button>
+      </article>
+      <article class="project-art right">
+        <button class="gallery-toggle square-btn">Ver galería</button>
+        <div class="project-info">
+          <h3>Blog Técnico</h3>
+          <p>Blog personal sobre tecnología y programación, desarrollado con un generador estático y personalizado con CSS moderno.</p>
+          <div class="project-gallery">
+            <img src="/IMG-references/logos/logotipo_css-min.png" alt="Blog Screenshot 1" />
+            <img src="/IMG-references/logos/Adobe_Photoshop_CC_icon.svg.png" alt="Blog Screenshot 2" />
+          </div>
+        </div>
+        <div class="project-img">
+          <img src="/IMG-references/logos/logotipo_css-min.png" alt="Proyecto 4" />
+        </div>
+      </article>
+      <script>
+        // Galería desplegable para cada proyecto
+        document.addEventListener('DOMContentLoaded', function () {
+          const toggles = document.querySelectorAll('.gallery-toggle');
+          toggles.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              // Buscar la galería dentro del mismo artículo
+              const article = btn.closest('.project-art');
+              const gallery = article.querySelector('.project-gallery');
+              if (gallery) {
+                gallery.classList.toggle('open');
+                btn.textContent = gallery.classList.contains('open') ? 'Ocultar galería' : 'Ver galería';
+              }
+            });
+          });
+        });
+      </script>
+    </section>
+  </div>
 
   <!-- Scroll to Top / Navigation Bubble -->
   <div id="scroll-bubble" role="button" tabindex="0" aria-label="Navigation menu" aria-expanded="false">
@@ -295,9 +374,17 @@
       </a>
     </div>
     <div id="contact">
-      <div><a href=""></a></div>
-      <div><a href=""></a></div>
-      <div><a href=""></a></div>
+      <div>
+        <span>Contacte</span>
+        <a href="mailto:ayoube@email.com">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+          ayoube@email.com
+        </a>
+        <a href="https://linkedin.com/in/ayoube" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><line x1="7" y1="7" x2="7" y2="7"/><line x1="12" y1="10" x2="12" y2="17"/><path d="M17 17v-3a2 2 0 0 0-4 0"/></svg>
+          LinkedIn
+        </a>
+      </div>
     </div>
     <div id="PP">
       <a href="">Avis Legal</a>
