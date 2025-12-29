@@ -15,9 +15,11 @@
   <header>
     <div id="logo-header"></div>
     <nav id="main-menu">
-      <p><a href="">Formació</a></p>
-      <p><a href="">Experiència Laboral</a></p>
-      <p><a href="">Projectes</a></p>
+      <p><a href="#section-header">Inicio</a></p>
+      <p><a href="#formacio">Formació</a></p>
+      <p><a href="#carrusel_skills">Skills</a></p>
+      <p><a href="#exp_laboral">Experiència</a></p>
+      <p><a href="#projectes">Projectes</a></p>
     </nav>
   </header>
 
@@ -357,7 +359,7 @@
   </div>
 
   <!-- Contact Bubble -->
-  <div id="contact-bubble" role="button" tabindex="0" aria-label="Contact me bubble">
+  <div id="contact-bubble" role="button" tabindex="0" aria-label="Contact me bubble" onclick="window.location.href='ContactMe.html'" style="cursor:pointer;">
     <span>CONTACT ME</span>
   </div>
 
@@ -372,19 +374,6 @@
       <a href="">
         <img src="IMG-references/x-social-media-logo-icon.webp" alt="Pequeño coche rojo en un semáforo" />
       </a>
-    </div>
-    <div id="contact">
-      <div>
-        <span>Contacte</span>
-        <a href="mailto:ayoube@email.com">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
-          ayoube@email.com
-        </a>
-        <a href="https://linkedin.com/in/ayoube" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><line x1="7" y1="7" x2="7" y2="7"/><line x1="12" y1="10" x2="12" y2="17"/><path d="M17 17v-3a2 2 0 0 0-4 0"/></svg>
-          LinkedIn
-        </a>
-      </div>
     </div>
     <div id="PP">
       <a href="">Avis Legal</a>
@@ -401,6 +390,17 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    // Ocultar scroll-bubble cuando está arriba del todo
+    window.addEventListener('scroll', function () {
+      const scrollBubble = document.getElementById('scroll-bubble');
+      if (window.scrollY < 10) {
+        scrollBubble.style.display = 'none';
+      } else {
+        scrollBubble.style.display = '';
+      }
+    });
   </script>
 </body>
 

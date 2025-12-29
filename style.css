@@ -505,38 +505,54 @@ div#llenguatges div.card:hover {
     position: relative;
     z-index: 2;
 }
+/* Botón de galería más accesible y con animación de parpadeo */
+/* Botón de galería más accesible, estirado y con animación de parpadeo */
+/* Botón de galería responsivo y que no cubre el texto */
 .gallery-toggle.square-btn {
-    position: absolute;
-    top: 50%;
-    right: -56px;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
-    max-width: 44px;
-    max-height: 44px;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+    max-width: 220px;
+    min-width: 120px;
+    height: 54px;
     background: var(--second);
     color: var(--primary);
     border: none;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    font-weight: 700;
+    border-radius: 22px;
+    font-size: 1.15rem;
+    font-weight: 800;
     cursor: pointer;
-    box-shadow: 0 2px 8px 0 rgba(0,210,210,0.13);
-    transition: background 0.2s, color 0.2s, right 0.2s;
-    z-index: 100;
-    padding: 0 0.2rem;
+    box-shadow: 0 0 24px 0 rgba(0,210,210,0.25), 0 2px 8px 0 rgba(0,210,210,0.13);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    z-index: 10;
+    padding: 0 1.2rem;
     white-space: normal;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    outline: 3px solid transparent;
+    animation: btn-blink-shadow 2s infinite alternate;
+    letter-spacing: 1px;
+    margin-top: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+@keyframes btn-blink-shadow {
+    0% {
+        box-shadow: 0 0 24px 0 rgba(0,210,210,0.25), 0 2px 8px 0 rgba(0,210,210,0.13);
+    }
+    50% {
+        box-shadow: 0 0 44px 8px rgba(0,255,255,0.55), 0 2px 16px 0 rgba(0,210,210,0.18);
+    }
+    100% {
+        box-shadow: 0 0 24px 0 rgba(0,210,210,0.25), 0 2px 8px 0 rgba(0,210,210,0.13);
+    }
 }
 .gallery-toggle.square-btn:hover {
     background: #00ffff;
     color: #222;
-    right: -68px;
+    outline: 3px solid #00ffff;
+    animation: btn-blink-shadow 1s infinite alternate;
 }
 
 .project-gallery {
@@ -805,17 +821,17 @@ div#exp_laboral {
 /* Scroll to Top / Navigation Bubble */
 #scroll-bubble {
     position: fixed;
-    bottom: 140px;
+    bottom: 130px;
     right: 30px;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: var(--second);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 210, 210, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     z-index: 998;
 }
@@ -875,6 +891,7 @@ div#exp_laboral {
     border-right: 8px solid transparent;
     border-top: 8px solid rgba(0, 0, 0, 0.95);
     pointer-events: auto;
+
     /* allow this zone to receive the cursor */
 }
 
@@ -897,7 +914,7 @@ div#exp_laboral {
 
 #scroll-bubble:hover {
     transform: scale(1.15);
-    box-shadow: 0 8px 25px rgba(0, 210, 210, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
 #scroll-bubble:hover #scroll-menu {
@@ -909,7 +926,7 @@ div#exp_laboral {
 /* Responsive - Tablets */
 @media (max-width: 768px) {
     #scroll-bubble {
-        bottom: 130px;
+        bottom: 110px;
         right: 25px;
         width: 80px;
         height: 80px;
@@ -934,14 +951,18 @@ div#exp_laboral {
 }
 
 /* Responsive - Mobile */
-@media (max-width: 480px) {
-    #scroll-bubble {
-        bottom: 120px;
-        right: 20px;
-        width: 70px;
-        height: 70px;
+@media (max-width: 900px) {
+    .gallery-toggle.square-btn {
+        width: 95%;
+        max-width: 160px;
+        min-width: 90px;
+        height: 44px;
+        font-size: 1rem;
+        border-radius: 16px;
+        padding: 0 0.8rem;
+        margin-top: 1rem;
     }
-
+}
     #scroll-icon {
         font-size: 1.1rem;
     }
@@ -960,29 +981,30 @@ div#exp_laboral {
     #scroll-bubble:hover {
         transform: scale(1.1);
     }
-}
+
+/* Contact Bubble */
 
 #contact-bubble {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: var(--second);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 210, 210, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 2001;
 }
 
 #contact-bubble span {
     color: var(--primary);
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-align: center;
     padding: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -991,42 +1013,41 @@ div#exp_laboral {
 
 #contact-bubble:hover {
     transform: scale(1.15);
-    box-shadow: 0 8px 25px rgba(0, 210, 210, 0.6);
-    background-color: var(--second);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsive - Tablets */
-@media (max-width: 768px) {
-    #contact-bubble {
-        bottom: 25px;
-        right: 25px;
-        width: 80px;
-        height: 80px;
-    }
-
-    #contact-bubble span {
-        font-size: 0.65rem;
-        letter-spacing: 0.5px;
-    }
-
-    #contact-bubble:hover {
-        transform: scale(1.12);
+@media (max-width: 600px) {
+    .gallery-toggle.square-btn {
+        width: 98%;
+        max-width: 100px;
+        min-width: 60px;
+        height: 32px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        padding: 0 0.4rem;
+        margin-top: 0.7rem;
     }
 }
+
 
 /* Responsive - Mobile */
 @media (max-width: 480px) {
     #contact-bubble {
-        bottom: 20px;
-        right: 20px;
-        width: 70px;
-        height: 70px;
+        bottom: 15px;
+        right: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    #scroll-bubble {
+        bottom: 85px;
+        right: 15px;
     }
 
     #contact-bubble span {
-        font-size: 0.6rem;
-        letter-spacing: 0px;
-        padding: 8px;
+        font-size: 0.62rem;
+        letter-spacing: 0.5px;
+        padding: 0 6px;
     }
 
     #contact-bubble:hover {
@@ -1053,25 +1074,25 @@ footer {
     align-items: center;
     flex-direction: column;
 
-    height: 400px;
+    height: 150px;
     width: 100%;
+
+    background-color: var(--second);
+
+    box-shadow: -1px -1px 23px 30px var(--second);
+    -webkit-box-shadow: -1px -1px 23px 30px var(--second);
+    -moz-box-shadow: -1px -1px 23px 30px var(--second);
 
 }
 
 footer div#social-media {
     display: flex;
     position: relative;
-    height: 20%;
+    height: 50%;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-
-    background-color: var(--second);
-
-    box-shadow: -1px -1px 32px 23px var(--second);
-    -webkit-box-shadow: -1px -1px 23px 30px var(--second);
-    -moz-box-shadow: -1px -1px 23px 30px var(--second);
 }
 
 footer div#social-media a {
@@ -1098,40 +1119,17 @@ footer div#social-media a img {
     margin: 0 20px;
 }
 
-footer div#contact {
-    display: flex;
-    position: relative;
-    height: 70%;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-
-footer div#contact a {
-    width: 20%;
-    height: 80%;
-
-    background-color: #003a3a;
-}
-
 footer div#PP {
     display: flex;
     position: relative;
     flex-direction: row;
 
-    height: 10%;
+    height: 40%;
     width: 100%;
 
     align-items: center;
     justify-content: center;
     flex-direction: row;
-
-    background-color: var(--second);
-
-    box-shadow: -1px -1px 23px 30px var(--second);
-    -webkit-box-shadow: -1px -1px 23px 30px var(--second);
-    -moz-box-shadow: -1px -1px 23px 30px var(--second);
 }
 
 footer div#PP a {
