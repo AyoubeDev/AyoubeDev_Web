@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error de validación</title>
+    <link rel="stylesheet" href="styleMessage.css">
+</head>
+<body>
+    <div class="mensaje-container error">
+        <h2>Error en el formulario</h2>
+        <ul id="errores"></ul>
+        <a href="ContactMe.html">Volver al formulario</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const errores = params.get('errors');
+        if (errores) {
+            const lista = document.getElementById('errores');
+            errores.split('|').forEach(error => {
+                const li = document.createElement('li');
+                li.textContent = error;
+                lista.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
