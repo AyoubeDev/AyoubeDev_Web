@@ -1,0 +1,263 @@
+<?php include 'header.php'; ?>
+
+  <!-- secció principal per mostrar una fotografia de mi i una descripció  -->
+  <section id="section-header" class="section-header-bg">
+    <article class="section-header-img"></article>
+    <article class="section-header-content">
+      <h2>Sobre Mi</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem omnis quia illo ut assumenda quibusdam et iure porro ipsum? Sit delectus voluptatum officia ipsum vitae! Quo omnis exercitationem fugiat quidem.
+      </p>
+    </article>
+  </section>
+
+  <!-- SVG -->
+  <svg id="svg-formacio">
+    <path d="M15 00 L15 1100" stroke="var(--second)" stroke-width="2" />
+    <circle cx="15" cy="110" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+    <circle cx="15" cy="400" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+    <circle cx="15" cy="690" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+    <circle cx="15" cy="985" r="10" fill="white" stroke="#00dfdf65" stroke-width="5" />
+  </svg>
+
+  <!-- apartat de formació -->
+  <div id="formacio">
+    <div id="title-formacio">
+      <p>TITLE</p>
+    </div>
+
+    <section id="sec-form">
+      <div class="sec-form-div">
+        <article><p></p></article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article><p></p></article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article><p></p></article>
+      </div>
+      <div class="sec-form-div">
+        <article><p></p></article>
+      </div>
+      <div class="sec-form-div">
+        <article><p></p></article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article><p></p></article>
+      </div>
+      <div class="sec-form-div" data-aos="fade-up" data-aos-anchor-placement="center-center">
+        <article><p></p></article>
+      </div>
+      <div class="sec-form-div">
+        <article><p></p></article>
+      </div>
+    </section>
+  </div>
+
+  <div id="llenguatges">
+    <div class="card">
+      <h3 class="lang-title">Català</h3>
+      <span class="lang-cert native">Nadiu</span>
+    </div>
+    <div class="card">
+      <h3 class="lang-title">Español</h3>
+      <span class="lang-cert native">Nadiu</span>
+    </div>
+    <div class="card">
+      <h3 class="lang-title">English</h3>
+      <span class="lang-level">Intermedio</span>
+      <span class="lang-cert">B2</span>
+    </div>
+    <div class="card">
+      <h3 class="lang-title">Amazigh</h3>
+      <span class="lang-cert native">Nadiu</span>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll("#llenguatges .card");
+    const maxRotate = 18;
+    const ease = 0.12;
+
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
+    }
+
+    cards.forEach((card) => {
+      let rect = card.getBoundingClientRect();
+      let currentX = 0, currentY = 0;
+      let targetX = 0, targetY = 0;
+      let rAF = null;
+
+      const update = () => {
+        currentX = lerp(currentX, targetX, ease);
+        currentY = lerp(currentY, targetY, ease);
+
+        card.style.transform = `
+            rotateX(${currentX}deg)
+            rotateY(${currentY}deg)
+            translateZ(40px)
+        `;
+
+        if (Math.abs(currentX - targetX) > 0.1 || Math.abs(currentY - targetY) > 0.1) {
+          rAF = requestAnimationFrame(update);
+        } else {
+          rAF = null;
+        }
+      };
+
+      const startAnimation = () => {
+        if (!rAF) rAF = requestAnimationFrame(update);
+      };
+
+      card.addEventListener("mousemove", (e) => {
+        rect = card.getBoundingClientRect();
+        const normX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        const normY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+        targetY = normX * maxRotate;
+        targetX = -normY * maxRotate;
+        startAnimation();
+      });
+
+      card.addEventListener("mouseleave", () => {
+        targetX = 0;
+        targetY = 0;
+        startAnimation();
+      });
+    });
+  </script>
+
+  <section id="carrusel_skills">
+    <div class="carousel">
+      <div class="track">
+        <img src="logos/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects">
+        <img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="PhotoShop">
+        <img src="logos/autodesk-maya-small-social-400.png" alt="Maya">
+        <img src="logos/Blender_logo_no_text.svg.png" alt="Blender">
+        <img src="logos/HTML-5-Badge-Logo.png" alt="HTML">
+        <img src="logos/logotipo_css-min.png" alt="CSS">
+        <img src="logos/Python-logo-notext.svg.png" alt="Python">
+        <img src="logos/substant-painter.png" alt="Substance Painter 3D">
+        <img src="logos/Unity-logo.png" alt="Unity">
+        <img src="logos/pngimg.com - mysql_PNG23.png" alt="MySQL">
+
+        <img src="logos/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects">
+        <img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="PhotoShop">
+        <img src="logos/autodesk-maya-small-social-400.png" alt="Maya">
+        <img src="logos/Blender_logo_no_text.svg.png" alt="Blender">
+        <img src="logos/HTML-5-Badge-Logo.png" alt="HTML">
+        <img src="logos/logotipo_css-min.png" alt="CSS">
+        <img src="logos/Python-logo-notext.svg.png" alt="Python">
+        <img src="logos/substant-painter.png" alt="Substance Painter 3D">
+        <img src="logos/Unity-logo.png" alt="Unity">
+        <img src="logos/pngimg.com - mysql_PNG23.png" alt="MySQL">
+      </div>
+    </div>
+  </section>
+
+  <!-- apartat de experiencia laboral -->
+  <div id="exp_laboral">
+    <div class="parent">
+      <div id="div1">
+        <img src="" alt="">
+        <div class="popup">Area de marketing — Gestió i administració de servidor web i desenvolupament web (2020–2022)</div>
+      </div>
+      <div id="div2">
+        <img src="" alt="">
+        <div class="popup">SI2 informàtica — Suport tècnic (2022-2023)</div>
+      </div>
+      <div id="div3">
+        <img src="" alt="">
+        <div class="popup">OXFAM ONG — Suport tècnic (2023)</div>
+      </div>
+      <div id="div4">
+        <img src="" alt="">
+        <div class="popup">L'enguna — Practicum (2024-...)</div>
+      </div>
+      <div id="div5">
+        <img src="" alt="">
+        <div class="popup">Projecte freelance — Disseny UI (2015–2016)</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="projectes">
+    <div>
+      <p> PROJECTES </p>
+    </div>
+    <section id="projectes-section">
+      <article class="project-art left">
+        <div class="project-img">
+          <img src="logos/HTML-5-Badge-Logo.png" alt="Proyecto 1" />
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Web</h3>
+          <p>Desarrollo de un portfolio personal con HTML, CSS y JavaScript, enfocado en la presentación visual y la experiencia de usuario.</p>
+          <div class="project-gallery">
+            <img src="logos/HTML-5-Badge-Logo.png" alt="Portfolio Screenshot 1" />
+            <img src="logos/logotipo_css-min.png" alt="Portfolio Screenshot 2" />
+          </div>
+        </div>
+        <button class="gallery-toggle square-btn">Ver galería</button>
+      </article>
+      <article class="project-art right">
+        <button class="gallery-toggle square-btn">Ver galería</button>
+        <div class="project-info">
+          <h3>Gestor de Tareas</h3>
+          <p>Aplicación web para gestionar tareas diarias, con funcionalidades de añadir, editar y eliminar tareas, usando React y Firebase.</p>
+          <div class="project-gallery">
+            <img src="logos/Python-logo-notext.svg.png" alt="Gestor Screenshot 1" />
+            <img src="logos/Unity-logo.png" alt="Gestor Screenshot 2" />
+          </div>
+        </div>
+        <div class="project-img">
+          <img src="logos/Python-logo-notext.svg.png" alt="Proyecto 2" />
+        </div>
+      </article>
+      <article class="project-art left">
+        <div class="project-img">
+          <img src="logos/Unity-logo.png" alt="Proyecto 3" />
+        </div>
+        <div class="project-info">
+          <h3>Videojuego 2D</h3>
+          <p>Desarrollo de un videojuego 2D educativo en Unity, con mecánicas de plataformas y retos de lógica para estudiantes.</p>
+          <div class="project-gallery">
+            <img src="logos/Unity-logo.png" alt="Juego Screenshot 1" />
+            <img src="logos/Blender_logo_no_text.svg.png" alt="Juego Screenshot 2" />
+          </div>
+        </div>
+        <button class="gallery-toggle square-btn">Ver galería</button>
+      </article>
+      <article class="project-art right">
+        <button class="gallery-toggle square-btn">Ver galería</button>
+        <div class="project-info">
+          <h3>Blog Técnico</h3>
+          <p>Blog personal sobre tecnología y programación, desarrollado con un generador estático y personalizado con CSS moderno.</p>
+          <div class="project-gallery">
+            <img src="logos/logotipo_css-min.png" alt="Blog Screenshot 1" />
+            <img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="Blog Screenshot 2" />
+          </div>
+        </div>
+        <div class="project-img">
+          <img src="logos/logotipo_css-min.png" alt="Proyecto 4" />
+        </div>
+      </article>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const toggles = document.querySelectorAll('.gallery-toggle');
+          toggles.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              const article = btn.closest('.project-art');
+              const gallery = article.querySelector('.project-gallery');
+              if (gallery) {
+                gallery.classList.toggle('open');
+                btn.textContent = gallery.classList.contains('open') ? 'Ocultar galería' : 'Ver galería';
+              }
+            });
+          });
+        });
+      </script>
+    </section>
+  </div>
+
+<?php include 'footer.php'; ?>
