@@ -427,58 +427,107 @@
       <span class="project-kicker">Más proyectos</span>
       <h4>Otros proyectos</h4>
     </div>
-    <section id="projectes-section">
-      <article class="project-art left" data-aos="fade-up">
+    <section id="projectes-section" aria-label="Otros proyectos">
+      <article class="project-art" data-aos="fade-up">
         <div class="project-img">
-          <img src="logos/HTML-5-Badge-Logo.png" alt="Proyecto Portfolio" />
+          <span class="project-index">01 / WEB</span>
+          <button class="project-image-button" type="button" aria-label="Ampliar imagen: Portfolio Web">
+            <img src="logos/HTML-5-Badge-Logo.png" alt="Logotipo de HTML5 para Portfolio Web" />
+            <span class="image-open-icon" aria-hidden="true">↗</span>
+          </button>
+          <span class="project-artwork-caption">Diseño · Código · Identidad</span>
         </div>
         <div class="project-info">
-          <h3>Portfolio Web</h3>
-          <p>Presentación personal construida con HTML, CSS y JavaScript, orientada a impacto visual y navegación fluida.</p>
-          <div class="project-gallery">
-            <img src="me/Untitled.png" alt="Captura portfolio 1" />
-            <img src="logos/logotipo_css-min.png" alt="Captura portfolio 2" />
-            <img src="logos/HTML-5-Badge-Logo.png" alt="Captura portfolio 3" />
+          <div>
+            <span class="project-kicker">Web · Frontend</span>
+            <h3>Portfolio Web</h3>
           </div>
-        </div>
-        <button class="gallery-toggle square-btn" type="button">Ver galería</button>
-      </article>
-
-      <article class="project-art right" data-aos="fade-up" data-aos-delay="80">
-        <button class="gallery-toggle square-btn" type="button">Ver galería</button>
-        <div class="project-info">
-          <h3>Gestor de Tareas</h3>
-          <p>Aplicación enfocada en productividad con flujo CRUD, estado claro y experiencia sencilla para usuario final.</p>
-          <div class="project-gallery">
-            <img src="logos/Python-logo-notext.svg.png" alt="Captura gestor 1" />
-            <img src="logos/Unity-logo.png" alt="Captura gestor 2" />
-            <img src="logos/pngimg.com - mysql_PNG23.png" alt="Captura gestor 3" />
+          <p>Una web personal que convierte trayectoria, habilidades y trabajos en un recorrido claro. Su diseño responsive combina navegación directa con una identidad visual propia.</p>
+          <ul class="project-tags" aria-label="Tecnologías y enfoque">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+          <button class="gallery-toggle square-btn" type="button" aria-expanded="false">Explorar imágenes <span aria-hidden="true">＋</span></button>
+          <div class="project-gallery" aria-label="Imágenes de Portfolio Web">
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de CSS"><img src="logos/logotipo_css-min.png" alt="Logotipo de CSS" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de HTML5"><img src="logos/HTML-5-Badge-Logo.png" alt="Logotipo de HTML5" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de Photoshop"><img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="Logotipo de Photoshop" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
           </div>
-        </div>
-        <div class="project-img">
-          <img src="logos/Python-logo-notext.svg.png" alt="Proyecto Gestor" />
         </div>
       </article>
 
-      <article class="project-art left" data-aos="fade-up" data-aos-delay="140">
+      <article class="project-art" data-aos="fade-up" data-aos-delay="80">
         <div class="project-img">
-          <img src="logos/Unity-logo.png" alt="Proyecto Videojuego" />
+          <span class="project-index">02 / PRODUCTO</span>
+          <button class="project-image-button" type="button" aria-label="Ampliar imagen: Gestor de Tareas">
+            <img src="logos/Python-logo-notext.svg.png" alt="Logotipo de Python para Gestor de Tareas" />
+            <span class="image-open-icon" aria-hidden="true">↗</span>
+          </button>
+          <span class="project-artwork-caption">Organización · Productividad</span>
         </div>
         <div class="project-info">
-          <h3>Videojuego 2D</h3>
-          <p>Prototipo educativo con mecánicas de lógica y ritmo visual para mantener aprendizaje y diversión.</p>
-          <div class="project-gallery">
-            <img src="logos/Unity-logo.png" alt="Captura videojuego 1" />
-            <img src="logos/Blender_logo_no_text.svg.png" alt="Captura videojuego 2" />
-            <img src="logos/substant-painter.png" alt="Captura videojuego 3" />
+          <div>
+            <span class="project-kicker">Aplicación · Productividad</span>
+            <h3>Gestor de Tareas</h3>
+          </div>
+          <p>Una herramienta para crear, consultar, actualizar y eliminar tareas con estados fáciles de identificar. El flujo CRUD mantiene las acciones cotidianas simples y ordenadas.</p>
+          <ul class="project-tags" aria-label="Características">
+            <li>CRUD</li><li>Gestión de datos</li><li>Flujo claro</li>
+          </ul>
+          <button class="gallery-toggle square-btn" type="button" aria-expanded="false">Explorar imágenes <span aria-hidden="true">＋</span></button>
+          <div class="project-gallery" aria-label="Imágenes de Gestor de Tareas">
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de Python"><img src="logos/Python-logo-notext.svg.png" alt="Logotipo de Python" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de MySQL"><img src="logos/pngimg.com - mysql_PNG23.png" alt="Logotipo de MySQL" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de CSS"><img src="logos/logotipo_css-min.png" alt="Logotipo de CSS" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
           </div>
         </div>
-        <button class="gallery-toggle square-btn" type="button">Ver galería</button>
+      </article>
+
+      <article class="project-art" data-aos="fade-up" data-aos-delay="140">
+        <div class="project-img">
+          <span class="project-index">03 / JUEGO</span>
+          <button class="project-image-button" type="button" aria-label="Ampliar imagen: Videojuego 2D">
+            <img src="logos/Unity-logo.png" alt="Logotipo de Unity para Videojuego 2D" />
+            <span class="image-open-icon" aria-hidden="true">↗</span>
+          </button>
+          <span class="project-artwork-caption">Lógica · Exploración · Juego</span>
+        </div>
+        <div class="project-info">
+          <div>
+            <span class="project-kicker">Videojuego · Prototipo educativo</span>
+            <h3>Videojuego 2D</h3>
+          </div>
+          <p>Un prototipo educativo que combina plataformas y retos de lógica. La progresión y el ritmo visual integran el aprendizaje en una experiencia de juego dinámica.</p>
+          <ul class="project-tags" aria-label="Herramientas y enfoque">
+            <li>Unity</li><li>Blender</li><li>Diseño 2D</li>
+          </ul>
+          <button class="gallery-toggle square-btn" type="button" aria-expanded="false">Explorar imágenes <span aria-hidden="true">＋</span></button>
+          <div class="project-gallery" aria-label="Imágenes de Videojuego 2D">
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de Unity"><img src="logos/Unity-logo.png" alt="Logotipo de Unity" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de Blender"><img src="logos/Blender_logo_no_text.svg.png" alt="Logotipo de Blender" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
+            <button class="project-image-button" type="button" aria-label="Ampliar logotipo de Substance 3D Painter"><img src="logos/substant-painter.png" alt="Logotipo de Substance 3D Painter" /><span class="image-open-icon" aria-hidden="true">↗</span></button>
+          </div>
+        </div>
       </article>
     </section>
+    <dialog class="image-viewer" id="project-image-viewer" aria-label="Visor de imágenes de proyectos">
+      <div class="image-viewer-header">
+        <span id="image-viewer-caption" aria-live="polite"></span>
+        <button class="dialog-close" type="button" data-image-close aria-label="Cerrar imagen">&times;</button>
+      </div>
+      <div class="image-viewer-stage">
+        <button class="image-viewer-nav" type="button" data-image-prev aria-label="Imagen anterior">&#8592;</button>
+        <img id="image-viewer-image" src="" alt="" />
+        <button class="image-viewer-nav" type="button" data-image-next aria-label="Imagen siguiente">&#8594;</button>
+      </div>
+      <span class="image-viewer-count" id="image-viewer-count" aria-live="polite"></span>
+    </dialog>
   </div>
 
   <script>
+    const parallaxItems = document.querySelectorAll('.parallax-item[data-parallax-speed]');
+    const parallaxBubbles = document.querySelectorAll('.ikigai-bubble[data-bubble-speed]');
+    let parallaxFrame = null;
+
     function updateParallax() {
       const scrollY = window.scrollY;
       const parallaxStrength = 0.24;
@@ -489,7 +538,7 @@
       document.documentElement.style.setProperty('--parallax-offset', offset + 'px');
       document.documentElement.style.setProperty('--bg-offset-y', bgOffset + 'px');
 
-      document.querySelectorAll('.parallax-item[data-parallax-speed]').forEach(function (item) {
+      parallaxItems.forEach(function (item) {
         const speed = parseFloat(item.getAttribute('data-parallax-speed')) || 0;
         const rect = item.getBoundingClientRect();
         const viewportAnchor = window.innerHeight * 0.5;
@@ -498,7 +547,7 @@
         item.style.setProperty('--item-parallax-y', translateY.toFixed(2) + 'px');
       });
 
-      document.querySelectorAll('.ikigai-bubble[data-bubble-speed]').forEach(function (bubble) {
+      parallaxBubbles.forEach(function (bubble) {
         const speed = parseFloat(bubble.getAttribute('data-bubble-speed')) || 0;
         const rect = bubble.getBoundingClientRect();
         const viewportAnchor = window.innerHeight * 0.52;
@@ -508,8 +557,19 @@
       });
     }
 
-    window.addEventListener('scroll', updateParallax, { passive: true });
-    window.addEventListener('resize', updateParallax);
+    function scheduleParallaxUpdate() {
+      if (parallaxFrame !== null) {
+        return;
+      }
+
+      parallaxFrame = requestAnimationFrame(function () {
+        parallaxFrame = null;
+        updateParallax();
+      });
+    }
+
+    window.addEventListener('scroll', scheduleParallaxUpdate, { passive: true });
+    window.addEventListener('resize', scheduleParallaxUpdate);
 
     document.addEventListener('DOMContentLoaded', function () {
       updateParallax();
@@ -571,9 +631,83 @@
           const gallery = article.querySelector('.project-gallery');
           if (gallery) {
             gallery.classList.toggle('open');
-            btn.textContent = gallery.classList.contains('open') ? 'Ocultar galería' : 'Ver galería';
+            const isOpen = gallery.classList.contains('open');
+            btn.setAttribute('aria-expanded', String(isOpen));
+            btn.firstChild.textContent = isOpen ? 'Ocultar imágenes ' : 'Explorar imágenes ';
+            btn.querySelector('span').textContent = isOpen ? '−' : '＋';
           }
         });
+      });
+
+      const imageViewer = document.getElementById('project-image-viewer');
+      const viewerImage = document.getElementById('image-viewer-image');
+      const viewerCaption = document.getElementById('image-viewer-caption');
+      const viewerCount = document.getElementById('image-viewer-count');
+      const viewerClose = imageViewer.querySelector('[data-image-close]');
+      let viewerImages = [];
+      let activeViewerImage = 0;
+      let imageTrigger = null;
+      let viewerScrollY = 0;
+      let previousBodyStyles;
+
+      function showViewerImage(index) {
+        activeViewerImage = (index + viewerImages.length) % viewerImages.length;
+        const sourceImage = viewerImages[activeViewerImage].querySelector('img');
+        viewerImage.src = sourceImage.currentSrc || sourceImage.src;
+        viewerImage.alt = sourceImage.alt;
+        viewerCaption.textContent = sourceImage.alt;
+        viewerCount.textContent = String(activeViewerImage + 1).padStart(2, '0') + ' / ' + String(viewerImages.length).padStart(2, '0');
+      }
+
+      document.querySelectorAll('#projectes-section .project-image-button').forEach(function (button) {
+        button.addEventListener('click', function () {
+          imageTrigger = button;
+          viewerImages = Array.from(button.closest('.project-art').querySelectorAll('.project-image-button'));
+          activeViewerImage = viewerImages.indexOf(button);
+          showViewerImage(activeViewerImage);
+          viewerScrollY = window.scrollY;
+          previousBodyStyles = {
+            position: document.body.style.position,
+            top: document.body.style.top,
+            width: document.body.style.width,
+            overflowY: document.body.style.overflowY
+          };
+          document.body.style.position = 'fixed';
+          document.body.style.top = '-' + viewerScrollY + 'px';
+          document.body.style.width = '100%';
+          document.body.style.overflowY = 'hidden';
+          imageViewer.showModal();
+          viewerClose.focus({ preventScroll: true });
+        });
+      });
+
+      viewerClose.addEventListener('click', function () {
+        imageViewer.close();
+      });
+      imageViewer.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          imageViewer.close();
+        }
+      });
+      imageViewer.addEventListener('click', function (event) {
+        if (event.target === imageViewer) {
+          imageViewer.close();
+        }
+      });
+      imageViewer.addEventListener('close', function () {
+        document.body.style.position = previousBodyStyles.position;
+        document.body.style.top = previousBodyStyles.top;
+        document.body.style.width = previousBodyStyles.width;
+        document.body.style.overflowY = previousBodyStyles.overflowY;
+        window.scrollTo(0, viewerScrollY);
+        imageTrigger.focus({ preventScroll: true });
+      });
+      imageViewer.querySelector('[data-image-prev]').addEventListener('click', function () {
+        showViewerImage(activeViewerImage - 1);
+      });
+      imageViewer.querySelector('[data-image-next]').addEventListener('click', function () {
+        showViewerImage(activeViewerImage + 1);
       });
 
       document.querySelectorAll('.project-dialog').forEach(function (dialog) {
@@ -582,6 +716,8 @@
         const slides = Array.from(dialog.querySelectorAll('.project-gallery-slide'));
         const slideCount = dialog.querySelector('[data-gallery-count]');
         let activeSlide = 0;
+        let dialogScrollY = 0;
+        let previousBodyStyles;
 
         function showSlide(index) {
           activeSlide = (index + slides.length) % slides.length;
@@ -594,18 +730,35 @@
         }
 
         trigger.addEventListener('click', function () {
+          dialogScrollY = window.scrollY;
+          previousBodyStyles = {
+            position: document.body.style.position,
+            top: document.body.style.top,
+            width: document.body.style.width,
+            overflowY: document.body.style.overflowY
+          };
+          document.body.style.position = 'fixed';
+          document.body.style.top = '-' + dialogScrollY + 'px';
+          document.body.style.width = '100%';
+          document.body.style.overflowY = 'hidden';
           dialog.showModal();
-          closeButton.focus();
+          closeButton.focus({ preventScroll: true });
         });
         closeButton.addEventListener('click', function () {
           dialog.close();
-          trigger.focus();
         });
         dialog.addEventListener('click', function (event) {
           if (event.target === dialog) {
             dialog.close();
-            trigger.focus();
           }
+        });
+        dialog.addEventListener('close', function () {
+          document.body.style.position = previousBodyStyles.position;
+          document.body.style.top = previousBodyStyles.top;
+          document.body.style.width = previousBodyStyles.width;
+          document.body.style.overflowY = previousBodyStyles.overflowY;
+          window.scrollTo(0, dialogScrollY);
+          trigger.focus({ preventScroll: true });
         });
         dialog.querySelector('[data-gallery-prev]').addEventListener('click', function () {
           showSlide(activeSlide - 1);
