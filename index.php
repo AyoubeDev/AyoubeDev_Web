@@ -84,10 +84,11 @@
     </section>
   </div>
 
-  <div id="llenguatges-over" class="parallax-block">
+  <section id="visual" class="parallax-block">
     <div class="section-lead compact" data-aos="fade-up">
-      <span class="lead-kicker">Visual + Idiomas</span>
-      <h3>Plantillas en parallax para tus fotos y una presentación de idiomas más viva</h3>
+      <span class="lead-kicker">Visual</span>
+      <h3>Galería visual</h3>
+      <p>Imágenes de mi recorrido profesional y creativo.</p>
     </div>
 
     <section class="photo-templates" aria-label="Plantillas parallax para fotografías">
@@ -108,6 +109,13 @@
         <span>Foto proyecto destacado</span>
       </article>
     </section>
+  </section>
+
+  <section id="llenguatges-over" class="parallax-block">
+    <div class="section-lead compact" data-aos="fade-up">
+      <span class="lead-kicker">Idiomas</span>
+      <h3>Llengües que parlo</h3>
+    </div>
 
     <div id="llenguatges">
       <article class="card" data-aos="zoom-in-up">
@@ -139,7 +147,7 @@
         <span class="lang-level native">Nadiu</span>
       </article>
     </div>
-  </div>
+  </section>
 
   <section id="carrusel_skills" class="parallax-block">
     <div class="section-lead compact" data-aos="fade-up">
@@ -271,10 +279,154 @@
   <div id="projectes" class="parallax-block">
     <div class="section-lead" data-aos="fade-up">
       <span class="lead-kicker">Projectes</span>
-      <h3>Proyectos que mezclan diseño visual, interacción y desarrollo web</h3>
-      <p>Cada bloque tiene plantilla de galería para que puedas mostrar capturas reales y proceso.</p>
+      <h3>Proyectos digitales, del concepto a la experiencia</h3>
+      <p>Videojuegos y experiencias interactivas creadas con intención visual y técnica.</p>
     </div>
 
+    <section id="senseless-feature" aria-labelledby="senseless-cover-title">
+      <button class="project-feature-cover" type="button" aria-haspopup="dialog" aria-controls="senseless-dialog">
+        <span class="project-cover-copy">
+          <span class="project-kicker">Videojuego · Unity</span>
+          <span class="project-cover-title" id="senseless-cover-title">SENSELESS</span>
+          <span class="project-cover-description">Un proyecto de videojuego donde concepto, diseño y desarrollo se encuentran.</span>
+          <span class="project-cover-action">Explorar proyecto <span aria-hidden="true">↗</span></span>
+        </span>
+        <span class="project-cover-art" aria-hidden="true">
+          <img src="logos/Unity-logo.png" alt="" />
+          <span>UNITY<br />GAME PROJECT</span>
+        </span>
+      </button>
+    </section>
+
+    <section id="foodcraft-feature" aria-labelledby="foodcraft-cover-title">
+      <button class="project-feature-cover foodcraft-cover" type="button" aria-haspopup="dialog" aria-controls="foodcraft-dialog">
+        <span class="project-cover-copy">
+          <span class="project-kicker">Aplicación · Python · SQL · APIs</span>
+          <span class="project-cover-title" id="foodcraft-cover-title">FoodCraft</span>
+          <span class="project-cover-description">Una aplicación construida con Python, datos relacionales e integración de servicios.</span>
+          <span class="project-cover-action">Explorar proyecto <span aria-hidden="true">↗</span></span>
+        </span>
+        <span class="project-cover-art foodcraft-cover-art" aria-hidden="true">
+          <img src="logos/Python-logo-notext.svg.png" alt="" />
+          <span>PYTHON<br />DATA &amp; API</span>
+        </span>
+      </button>
+    </section>
+
+    <dialog class="project-dialog" id="senseless-dialog" aria-labelledby="senseless-dialog-title">
+      <div class="project-dialog-header">
+        <div>
+          <span class="project-kicker">Videojuego · Unity</span>
+          <h3 id="senseless-dialog-title">SENSELESS</h3>
+        </div>
+        <button class="dialog-close" type="button" data-close-project aria-label="Cerrar proyecto">&times;</button>
+      </div>
+
+      <div class="project-dialog-content">
+        <section class="project-detail-gallery" aria-label="Galería visual de SENSELESS">
+          <div class="project-gallery-stage">
+            <figure class="project-gallery-slide is-active" aria-hidden="false">
+              <img src="logos/Unity-logo.png" alt="Logotipo de Unity" />
+              <figcaption><span>01 / 03</span>Unity · Motor de juego</figcaption>
+            </figure>
+            <figure class="project-gallery-slide" aria-hidden="true">
+              <img src="logos/Blender_logo_no_text.svg.png" alt="Logotipo de Blender" />
+              <figcaption><span>02 / 03</span>Blender · Herramienta 3D</figcaption>
+            </figure>
+            <figure class="project-gallery-slide" aria-hidden="true">
+              <img src="logos/substant-painter.png" alt="Logotipo de Substance 3D Painter" />
+              <figcaption><span>03 / 03</span>Substance 3D Painter · Texturas</figcaption>
+            </figure>
+          </div>
+          <div class="project-gallery-controls">
+            <button type="button" data-gallery-prev aria-label="Imagen anterior">&#8592;</button>
+            <span data-gallery-count aria-live="polite">01 / 03</span>
+            <button type="button" data-gallery-next aria-label="Imagen siguiente">&#8594;</button>
+          </div>
+        </section>
+
+        <section class="project-development" aria-labelledby="senseless-development-title">
+          <span class="project-kicker">Detrás del juego</span>
+          <h4 id="senseless-development-title">Conceptos y desarrollo</h4>
+          <p>SENSELESS es un videojuego desarrollado en Unity. Este espacio reúne las decisiones de concepto, diseño y producción que dan forma al proyecto.</p>
+          <div class="development-notes">
+            <article>
+              <span>01</span>
+              <div><h5>Concepto</h5><p>La idea y la dirección que definen el proyecto.</p></div>
+            </article>
+            <article>
+              <span>02</span>
+              <div><h5>Diseño</h5><p>La experiencia, las mecánicas y la identidad visual.</p></div>
+            </article>
+            <article>
+              <span>03</span>
+              <div><h5>Desarrollo</h5><p>Implementación e iteración dentro de Unity.</p></div>
+            </article>
+          </div>
+          <span class="development-engine"><img src="logos/Unity-logo.png" alt="" /> Desarrollado en Unity</span>
+        </section>
+      </div>
+    </dialog>
+
+    <dialog class="project-dialog" id="foodcraft-dialog" aria-labelledby="foodcraft-dialog-title">
+      <div class="project-dialog-header">
+        <div>
+          <span class="project-kicker">Python · SQL · APIs</span>
+          <h3 id="foodcraft-dialog-title">FoodCraft</h3>
+        </div>
+        <button class="dialog-close" type="button" data-close-project aria-label="Cerrar proyecto">&times;</button>
+      </div>
+
+      <div class="project-dialog-content">
+        <section class="project-detail-gallery" aria-label="Galería visual de FoodCraft">
+          <div class="project-gallery-stage">
+            <figure class="project-gallery-slide is-active" aria-hidden="false">
+              <img src="logos/Python-logo-notext.svg.png" alt="Logotipo de Python" />
+              <figcaption><span>01 / 03</span>Python · Lógica de aplicación</figcaption>
+            </figure>
+            <figure class="project-gallery-slide" aria-hidden="true">
+              <img src="logos/pngimg.com - mysql_PNG23.png" alt="Logotipo de MySQL" />
+              <figcaption><span>02 / 03</span>SQL · Gestión de datos</figcaption>
+            </figure>
+            <figure class="project-gallery-slide" aria-hidden="true">
+              <div class="foodcraft-api-mark" aria-hidden="true">API<span>REST</span></div>
+              <figcaption><span>03 / 03</span>APIs · Integración de servicios</figcaption>
+            </figure>
+          </div>
+          <div class="project-gallery-controls">
+            <button type="button" data-gallery-prev aria-label="Imagen anterior">&#8592;</button>
+            <span data-gallery-count aria-live="polite">01 / 03</span>
+            <button type="button" data-gallery-next aria-label="Imagen siguiente">&#8594;</button>
+          </div>
+        </section>
+
+        <section class="project-development" aria-labelledby="foodcraft-development-title">
+          <span class="project-kicker">Arquitectura del proyecto</span>
+          <h4 id="foodcraft-development-title">Conceptos y desarrollo</h4>
+          <p>FoodCraft combina Python para la lógica de aplicación, SQL para los datos e integración de APIs para conectar servicios.</p>
+          <div class="development-notes">
+            <article>
+              <span>01</span>
+              <div><h5>Python</h5><p>Reglas y flujo de la aplicación.</p></div>
+            </article>
+            <article>
+              <span>02</span>
+              <div><h5>SQL</h5><p>Consulta y organización de datos.</p></div>
+            </article>
+            <article>
+              <span>03</span>
+              <div><h5>APIs</h5><p>Comunicación con servicios externos.</p></div>
+            </article>
+          </div>
+          <span class="development-engine"><img src="logos/Python-logo-notext.svg.png" alt="" /> Python · SQL · APIs</span>
+        </section>
+      </div>
+    </dialog>
+
+    <div class="project-group-title">
+      <span class="project-kicker">Más proyectos</span>
+      <h4>Otros proyectos</h4>
+    </div>
     <section id="projectes-section">
       <article class="project-art left" data-aos="fade-up">
         <div class="project-img">
@@ -421,6 +573,45 @@
             gallery.classList.toggle('open');
             btn.textContent = gallery.classList.contains('open') ? 'Ocultar galería' : 'Ver galería';
           }
+        });
+      });
+
+      document.querySelectorAll('.project-dialog').forEach(function (dialog) {
+        const trigger = document.querySelector('[aria-controls="' + dialog.id + '"]');
+        const closeButton = dialog.querySelector('[data-close-project]');
+        const slides = Array.from(dialog.querySelectorAll('.project-gallery-slide'));
+        const slideCount = dialog.querySelector('[data-gallery-count]');
+        let activeSlide = 0;
+
+        function showSlide(index) {
+          activeSlide = (index + slides.length) % slides.length;
+          slides.forEach(function (slide, slideIndex) {
+            const isActive = slideIndex === activeSlide;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+          });
+          slideCount.textContent = String(activeSlide + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+        }
+
+        trigger.addEventListener('click', function () {
+          dialog.showModal();
+          closeButton.focus();
+        });
+        closeButton.addEventListener('click', function () {
+          dialog.close();
+          trigger.focus();
+        });
+        dialog.addEventListener('click', function (event) {
+          if (event.target === dialog) {
+            dialog.close();
+            trigger.focus();
+          }
+        });
+        dialog.querySelector('[data-gallery-prev]').addEventListener('click', function () {
+          showSlide(activeSlide - 1);
+        });
+        dialog.querySelector('[data-gallery-next]').addEventListener('click', function () {
+          showSlide(activeSlide + 1);
         });
       });
     });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
   <meta charset="UTF-8" />
@@ -15,13 +15,16 @@
 
 <body>
   <header>
-    <div id="logo-header"></div>
-    <nav id="main-menu">
-      <p><a href="#section-header">Inicio</a></p>
-      <p><a href="#formacio">Formació</a></p>
-      <p><a href="#carrusel_skills">Skills</a></p>
-      <p><a href="#ikigai">Ikigai</a></p>
-      <p><a href="#exp_laboral">Experiència</a></p>
-      <p><a href="#projectes">Projectes</a></p>
+    <a id="logo-header" href="#section-header" aria-label="Ayoube, inici">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-name">Ayoube<small>Portfolio</small></span>
+    </a>
+    <nav id="main-menu" aria-label="Navegació principal">
+      <a href="#section-header">Inici</a>
+      <a href="#formacio">Formació</a>
+      <a href="#carrusel_skills">Skills</a>
+      <a href="#ikigai">Ikigai</a>
+      <a href="#exp_laboral">Experiència</a>
+      <a href="#projectes">Projectes</a>
     </nav>
   </header>

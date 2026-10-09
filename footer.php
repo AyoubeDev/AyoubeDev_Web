@@ -1,4 +1,4 @@
-  <!-- Scroll to Top / Navigation Bubble -->
+  <!-- Navegación rápida -->
   <div id="scroll-bubble" role="button" tabindex="0" aria-label="Navigation menu" aria-expanded="false">
     <span id="scroll-icon">↑</span>
     <div id="scroll-menu">
@@ -11,30 +11,25 @@
     </div>
   </div>
 
-  <!-- Contact Bubble -->
+  <!-- Acceso al contacto -->
   <div id="contact-bubble" role="button" tabindex="0" aria-label="Contact me bubble" onclick="window.location.href='ContactMe.html'" style="cursor:pointer;">
     <span>CONTACT ME</span>
   </div>
 
   <footer>
-    <div id="social-media">
-      <a href="">
+    <nav id="social-media" aria-label="Xarxes socials">
+      <a href="https://www.linkedin.com/in/ayoube-chilah-assanhaji-85b660334">
         <img src="linkedin-black-logo.png" alt="LinkedIn" />
       </a>
       <a href="">
-        <img src="87390.png" alt="GitHub" />
+        <img src="87390.png" alt="Instagram" />
       </a>
-      <a href="">
-        <img src="x-social-media-logo-icon.webp" alt="X" />
+      <a href="https://github.com/AyoubeDev">
+        <img src="25231.png" alt="GitHub" />
       </a>
-    </div>
-    <div id="PP">
-      <a href="">Avis Legal</a>
-      <a href="">Cookies</a>
-      <a href="">Politiques de privacitat</a>
-    </div>
+    </nav>
     <div id="copyright">
-      <p>&copy; Ayoube Assanhaji Chilah 2025 - tots els drets reservats</p>
+      <p>&copy; Ayoube Assanhaji Chilah 2026 - tots els drets reservats</p>
     </div>
   </footer>
 
