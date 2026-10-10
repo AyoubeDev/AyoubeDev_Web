@@ -524,10 +524,6 @@
   </div>
 
   <script>
-    const parallaxItems = document.querySelectorAll('.parallax-item[data-parallax-speed]');
-    const parallaxBubbles = document.querySelectorAll('.ikigai-bubble[data-bubble-speed]');
-    let parallaxFrame = null;
-
     function updateParallax() {
       const scrollY = window.scrollY;
       const parallaxStrength = 0.24;
@@ -538,7 +534,7 @@
       document.documentElement.style.setProperty('--parallax-offset', offset + 'px');
       document.documentElement.style.setProperty('--bg-offset-y', bgOffset + 'px');
 
-      parallaxItems.forEach(function (item) {
+      document.querySelectorAll('.parallax-item[data-parallax-speed]').forEach(function (item) {
         const speed = parseFloat(item.getAttribute('data-parallax-speed')) || 0;
         const rect = item.getBoundingClientRect();
         const viewportAnchor = window.innerHeight * 0.5;
@@ -547,7 +543,7 @@
         item.style.setProperty('--item-parallax-y', translateY.toFixed(2) + 'px');
       });
 
-      parallaxBubbles.forEach(function (bubble) {
+      document.querySelectorAll('.ikigai-bubble[data-bubble-speed]').forEach(function (bubble) {
         const speed = parseFloat(bubble.getAttribute('data-bubble-speed')) || 0;
         const rect = bubble.getBoundingClientRect();
         const viewportAnchor = window.innerHeight * 0.52;
@@ -557,19 +553,8 @@
       });
     }
 
-    function scheduleParallaxUpdate() {
-      if (parallaxFrame !== null) {
-        return;
-      }
-
-      parallaxFrame = requestAnimationFrame(function () {
-        parallaxFrame = null;
-        updateParallax();
-      });
-    }
-
-    window.addEventListener('scroll', scheduleParallaxUpdate, { passive: true });
-    window.addEventListener('resize', scheduleParallaxUpdate);
+    window.addEventListener('scroll', updateParallax, { passive: true });
+    window.addEventListener('resize', updateParallax);
 
     document.addEventListener('DOMContentLoaded', function () {
       updateParallax();
