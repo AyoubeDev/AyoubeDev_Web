@@ -152,32 +152,42 @@
   <section id="carrusel_skills" class="parallax-block">
     <div class="section-lead compact" data-aos="fade-up">
       <span class="lead-kicker">Stack visual</span>
-      <h3>Herramientas con las que diseño, desarrollo y prototipo</h3>
+      <h3>Diseño y desarrollo</h3>
     </div>
 
-    <div class="carousel">
-      <div class="track">
-        <img src="logos/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects" />
-        <img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="PhotoShop" />
-        <img src="logos/autodesk-maya-small-social-400.png" alt="Maya" />
-        <img src="logos/Blender_logo_no_text.svg.png" alt="Blender" />
-        <img src="logos/HTML-5-Badge-Logo.png" alt="HTML" />
-        <img src="logos/logotipo_css-min.png" alt="CSS" />
-        <img src="logos/Python-logo-notext.svg.png" alt="Python" />
-        <img src="logos/substant-painter.png" alt="Substance Painter" />
-        <img src="logos/Unity-logo.png" alt="Unity" />
-        <img src="logos/pngimg.com - mysql_PNG23.png" alt="MySQL" />
+    <div class="skill-group">
+      <h3>Front-End</h3>
+      <div class="carousel" role="region" aria-label="Herramientas de diseño">
+        <div class="track">
+          <img src="logos/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects" />
+          <img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" />
+          <img src="logos/autodesk-maya-small-social-400.png" alt="Maya" />
+          <img src="logos/Blender_logo_no_text.svg.png" alt="Blender" />
+          <img src="logos/substant-painter.png" alt="Substance Painter" />
+          <img src="logos/Adobe_After_Effects_CC_icon.svg.png" alt="" aria-hidden="true" />
+          <img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="" aria-hidden="true" />
+          <img src="logos/autodesk-maya-small-social-400.png" alt="" aria-hidden="true" />
+          <img src="logos/Blender_logo_no_text.svg.png" alt="" aria-hidden="true" />
+          <img src="logos/substant-painter.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </div>
 
-        <img src="logos/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects" />
-        <img src="logos/Adobe_Photoshop_CC_icon.svg.png" alt="PhotoShop" />
-        <img src="logos/autodesk-maya-small-social-400.png" alt="Maya" />
-        <img src="logos/Blender_logo_no_text.svg.png" alt="Blender" />
-        <img src="logos/HTML-5-Badge-Logo.png" alt="HTML" />
-        <img src="logos/logotipo_css-min.png" alt="CSS" />
-        <img src="logos/Python-logo-notext.svg.png" alt="Python" />
-        <img src="logos/substant-painter.png" alt="Substance Painter" />
-        <img src="logos/Unity-logo.png" alt="Unity" />
-        <img src="logos/pngimg.com - mysql_PNG23.png" alt="MySQL" />
+    <div class="skill-group">
+      <h3>Back-End</h3>
+      <div class="carousel" role="region" aria-label="Tecnologías de desarrollo">
+        <div class="track">
+          <img src="logos/HTML-5-Badge-Logo.png" alt="HTML" />
+          <img src="logos/logotipo_css-min.png" alt="CSS" />
+          <img src="logos/Python-logo-notext.svg.png" alt="Python" />
+          <img src="logos/Unity-logo.png" alt="Unity" />
+          <img src="logos/pngimg.com - mysql_PNG23.png" alt="MySQL" />
+          <img src="logos/HTML-5-Badge-Logo.png" alt="" aria-hidden="true" />
+          <img src="logos/logotipo_css-min.png" alt="" aria-hidden="true" />
+          <img src="logos/Python-logo-notext.svg.png" alt="" aria-hidden="true" />
+          <img src="logos/Unity-logo.png" alt="" aria-hidden="true" />
+          <img src="logos/pngimg.com - mysql_PNG23.png" alt="" aria-hidden="true" />
+        </div>
       </div>
     </div>
   </section>
