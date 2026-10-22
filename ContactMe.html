@@ -13,8 +13,9 @@
             <img src="IMG-references/me/image.jpg" alt="Contact" />
         </div>
         <div class="contact-form-wrapper">
-            <form class="contact-form" action="send_email.php" method="POST" autocomplete="on">
+            <form class="contact-form" id="contact-form" autocomplete="on">
                 <h2>Contacto</h2>
+                <p>Al enviar, se abrirá tu aplicación de correo con el mensaje preparado.</p>
                 <label for="name">Nombre y apellidos</label>
                 <input type="text" id="name" name="name" required placeholder="Tu nombre y apellidos">
 
@@ -28,8 +29,34 @@
                 <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje..."></textarea>
 
                 <button type="submit">Enviar</button>
+                <p id="form-status" role="status" aria-live="polite" hidden></p>
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+            const name = formData.get('name').toString().trim();
+            const email = formData.get('email').toString().trim();
+            const subject = formData.get('subject').toString().trim();
+            const message = formData.get('message').toString().trim();
+            const body = [
+                `Nombre y apellidos: ${name}`,
+                `Correo electrónico: ${email}`,
+                `Asunto: ${subject}`,
+                '',
+                message
+            ].join('\n');
+            const mailto = `mailto:ayoubechilah@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            const status = document.getElementById('form-status');
+            status.textContent = 'Si no se abre tu aplicación de correo, escribe a ayoubechilah@gmail.com.';
+            status.hidden = false;
+            window.location.href = mailto;
+        });
+    </script>
 </body>
 </html>
