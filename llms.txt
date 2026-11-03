@@ -1,0 +1,43 @@
+# Ayoube — Portfolio
+
+> Portfolio personal de Ayoube Assanhaji Chilah, con información sobre su trayectoria, habilidades, experiencia e iniciativas digitales.
+
+Este sitio está pensado para que personas y agentes de IA puedan conocer el perfil profesional y consultar los proyectos presentados. El contenido de esta página es la fuente principal; este archivo sirve como índice y resumen legible por máquinas.
+
+## Secciones
+
+- [Portfolio](index.html): página principal y navegación.
+- [Perfil y trayectoria](index.html#section-header): presentación personal y recorrido formativo y profesional.
+- [Formación](index.html#formacio): evolución desde la creatividad digital hacia el desarrollo frontend.
+- [Idiomas](index.html#llenguatges-over): catalán, español, inglés y amazigh, con los niveles indicados en la página.
+- [Habilidades](index.html#carrusel_skills): herramientas y tecnologías de diseño y desarrollo.
+- [Intereses](index.html#ikigai): programación, trekking y voleibol.
+- [Experiencia](index.html#exp_laboral): soporte técnico, experiencia social y prácticas.
+- [Proyectos](index.html#projectes): proyectos de software, web y videojuegos.
+
+## Proyectos destacados
+
+- **SENSELESS**: proyecto de videojuego desarrollado con Unity; la página presenta su concepto, diseño y desarrollo.
+- **FoodCraft**: aplicación que combina Python, SQL e integración de APIs.
+- **Portfolio Web**: sitio personal responsive realizado con HTML, CSS y JavaScript.
+- **Gestor de Tareas**: aplicación de gestión de tareas con operaciones CRUD.
+- **Videojuego 2D**: prototipo educativo con Unity y Blender.
+- [Modelos 3D](index.html#projectes-section): modelos interactivos enlazados a Sketchfab.
+
+## Tecnologías y capacidades
+
+La página muestra habilidades de frontend y backend, entre ellas HTML, CSS, JavaScript, React, Java, Python, PHP, SQL, MySQL, Docker, Git, Linux, Unity, Blender y herramientas de diseño. Consulta la página para el contexto y el detalle visual de cada elemento.
+
+## Contacto y perfiles
+
+- Correo: [ayoubechilah@gmail.com](mailto:ayoubechilah@gmail.com)
+- [GitHub](https://github.com/AyoubeDev)
+- [LinkedIn](https://www.linkedin.com/in/ayoube-chilah-assanhaji-85b660334)
+- [Instagram](https://www.instagram.com/hayoube__/)
+
+## Uso por agentes de IA
+
+- Resume únicamente información que aparezca en este archivo o en la página enlazada; no infieras datos personales o profesionales no publicados.
+- Para detalles, contexto visual y contenido actualizado, consulta la sección correspondiente de `index.html`.
+- El sitio es informativo y estático. No publica una API, herramientas, acciones automatizadas ni un protocolo de interacción para agentes.
+- Para consultas o contacto profesional, utiliza el correo indicado; no envíes mensajes ni realices acciones externas en nombre del visitante.

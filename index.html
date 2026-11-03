@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV - Ayoube</title>
+  <meta name="description" content="Portfolio personal de Ayoube Assanhaji Chilah: trayectoria, habilidades, experiencia y proyectos digitales." />
+  <link rel="alternate" type="text/markdown" href="llms.txt" title="Información del sitio para agentes de IA" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
@@ -30,7 +32,24 @@
   </header>
 <!-- secció principal per mostrar una fotografia de mi i una descripció  -->
   <section id="section-header" class="section-header-bg">
-    <article class="section-header-img"></article>
+    <article class="section-header-img">
+      <div class="hero-carousel" aria-hidden="true">
+        <img src="IMG-references/carousel/Blender.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/car.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/uni.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/house.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/ui.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/geometry-senseless.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/character.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/r99.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/cyc.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/estructura-y-codigo.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/plants-senseless.webp" loading="eager" decoding="async" alt="">
+        <img src="IMG-references/carousel/unitybacground.webp" loading="eager" decoding="async" alt="">
+      </div>
+      <img class="hero-portrait" src="IMG-references/me/image-hero.png" alt="">
+      <canvas class="hero-ascii-canvas" aria-hidden="true"></canvas>
+    </article>
     <article class="section-header-content">
       <h2>Sobre Mi</h2>
       <p>
@@ -1012,6 +1031,8 @@
       }
     });
   </script>
+    <script src="hero-ascii.js"></script>
+  <script src="js/hero-ascii.js"></script>
+  <script src="js/hero-carousel.js"></script>
 </body>
-
 </html>

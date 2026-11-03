@@ -29,7 +29,9 @@ jobs:
           path: |
             *.html
             *.css
-            IMG-references/
+            llms.txt
+            hero-ascii.js
+            js/
 
   deploy:
     environment:
